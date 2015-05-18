@@ -1,0 +1,30 @@
+﻿*{margin:0;padding:0;border:none;}
+#content{margin:0 auto; width:960px;}
+#menu_img{height:210px; width:960px;margin-top:0;}
+#left{margin-top:-12px;height:210px;width:200px;float:left; border:1px solid #CC0000;z-index:99;}
+
+/*menu_start*/
+#ul{width:100px;height:210px;border-bottom:0;text-align:center;}
+ul li{width:100px;height:35px;position:relative;top: 0px;left: 0px;}
+.a{font-size:16px;text-decoration:none;width:200px;display:inline-block;padding:0;height:35px; line-height:35px;background-color:#CC0000;color:#fff;}
+.a:hover{text-decoration:none;background-color:#fff;color:#f00;}
+.inter_ul{display:none;width:200px;background-color:#ffffff;border-top:1px solid #CC0000;border-bottom:1px solid #CC0000;border-right:1px solid #CC0000;z-index:999;}
+.inter_ul li{width:130px;height:30px;margin:0 auto;}
+.inter_ul li a{width:130px;height:30px;}
+.inter_ul li a:hover{ color:#0000ff;text-align:center;line-height:30px;font-size:16px;}
+div.menu ul li a, div.menu ul li a:visited{background-color: #ce0000;border: 1px #ce0000 solid; color: #dde4ec;display: block;line-height: 1.5em;padding:8px 0px;text-decoration: none;white-space:nowrap;}
+.li_a a{text-align:center;}
+
+/*menu_end*/
+#right{ height:200px;width:750px; margin-top:2px;margin-left:210px;z-index:1;}
+#show{height:1000px;width:960px;margin-top:10px;margin-bottom:20px;}
+#hot,#advice,#new{height:320px;width:960px;border:1px solid #ccc;}
+#advice,#new{ margin-top:10px;}
+#hot_info,#advice_info,#new_info{ height:20px;width:900px;background-color:#eeeee0;border-bottom:2px solid #CC0000;text-align:center;line-height:20px;font-family:华文行楷;font-size:20px;color:#CC0000;float:left;}
+.more{width:60px;height:20px;background-color:#eeeee0;border-bottom:2px solid #CC0000;text-align:center;line-height:20px;color:#CC0000;float:left;clear:right;}
+#hot_goods,#advice_goods,#new_goods{height:230px;width:960px;float:left;}
+
+/*返回顶部*/
+.scroll{width:35px;height:80px;background:#ccc;color:#555;line-height:20px;text-align:center;position:fixed;right:10px;bottom:50px;cursor:pointer;font-size:12px;}
+
+.imgCss{margin-left:40px;}

@@ -1,0 +1,108 @@
+﻿*
+{
+    margin:0;
+    padding:0;
+}
+#contanier
+{
+    margin:0 auto;
+    padding:0;
+    height:auto;
+    width:960px;
+    border:none;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:12px;
+    font-family:宋体;
+}
+#order_success_step
+{
+    height:33px;
+    width:960px;
+    border:none;
+    overflow:hidden;
+}
+/*content_start*/
+#content
+{
+    height:250px;
+    width:960px;
+    border:2px solid #eeeee0;
+    margin-top:10px;
+}
+#top
+{
+    height:50px;
+    width:960px;
+    border:none;
+}
+#right_icon
+{
+    height:44px;
+    width:44px;
+    margin-top:3px;
+    margin-bottom:3px;
+    margin-left:20px;
+    border:none;
+    float:left;
+}
+#right
+{
+    height:44px;
+    width:886px;
+    float:left;
+    clear:right;
+    line-height:50px;
+    margin-left:10px;
+    font-size:16px;
+    font-family:宋体;
+}
+#middle
+{
+    height:100px;
+    width:960px;
+    border-top:2px solid #eeeee0;
+    border-bottom:2px solid #eeeee0;
+}
+#bottom
+{
+    height:100px;
+    width:960px;
+    border:none;
+    text-align:center;
+}
+#bottom table
+{
+    height:100px;
+    width:960px;
+    border:none;
+}
+#bottom table tr
+{
+    height:25px;
+    width:960px;
+    border:none;
+}
+.td1
+{
+    width:100px;
+}
+.td2
+{
+    width:560px;
+}
+.td1 a
+{
+    color:#06f;
+}
+/*content_end*/
+#tips
+{
+    height:40px;
+    width:960px;
+    line-height:20px;
+}
+#tip
+{
+    color:#f00;
+}

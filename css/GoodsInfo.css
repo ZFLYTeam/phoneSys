@@ -1,0 +1,50 @@
+﻿#content
+{
+    margin:0 auto;
+    padding:0;
+    width:950px;
+    height:770px;
+    margin-bottom:10px;
+}
+/*right-start*/
+#right
+{
+    padding:5px;
+    height:740px;
+    width:950px; 
+    float:left;
+    border:1px solid #ccc;
+    margin-top:10px;
+    z-index:100;
+}
+#rt{height:280px;width:950px;}
+#rt1{height:278px;width:208px;border-right:1px solid #b22222;border-top:1px solid #b22222;border-left:1px solid #b22222;border-bottom:1px solid #b22222;float:left;}
+#imgBig{height:210px;width:110px;margin-left:45px;border:2px solid #eee;text-align:center;}
+#rt2{height:268px;width:728px;float:left;padding:5px;border-bottom:1px solid #b22222;border-right:1px solid #b22222;border-top:1px solid #b22222;}
+
+/*选项卡开始*/
+.wrap{height:420px;width:950px;margin-top:50px;}
+.hide{display:none;}
+#tab_t{height:25px;border-bottom:1px solid #c00;}
+#tab_t li{float:left; color:#fff;width:100px; height:24px; line-height:24px; margin:0 4px; text-align:center; border:1px solid #c00;border-bottom:none;background:#FF0000; cursor:pointer}
+#tab_t .act{ position:relative; height:25px; margin-bottom:-1px; background:#fff;color:#000;}
+#tab_c{border-bottom:1px solid #c00;border-left:1px solid #c00;border-right:1px solid #c00; border-top:none; padding:20px;width:910px;height:330px;}
+/*选项卡结束*/
+/*right-end*/
+#left_foot{width:200px;height:400px;margin-top:220px;border:1px solid #ccc;}
+#range{width:200px;height:25px;text-align:center;background:#eee;color:#cd2626;line-height:25px;font-weight:bold;}
+#range_img{height:150px;width:200px;text-align:center;}
+#range_other{height:225px;width:200px;}
+.color{background:#eee;}
+
+/*imgBig-start*/
+.imgbox{position:relative;}
+.probox{width:110px; height:210px;}
+.probox  img{width:110px; height:210px;vertical-align:top;}
+.showbox{display:none;position:absolute;left:115px;top:0;width:210px;height:210px;overflow:hidden;border:1px solid #ccc;background:#fff;}
+.showbox img{position:absolute;height:630px;width:330px;}
+.hoverbox{display:none;position:absolute;top:0;left:150px;background:#09f;border:1px solid #09f;height:75px;width:70px;cursor:move;z-index:10;}
+/*imgBig-end*/
+
+.btnEstimateCss{width:100px;height:24px;text-align:center;}
+.btnDetail{text-align:center;}

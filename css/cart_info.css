@@ -1,0 +1,147 @@
+﻿       *
+       {
+           margin:0;
+           padding:0;
+       }
+       #contanier
+       {
+           margin:0 auto;
+           padding:0;
+           height:auto;
+           width:960px;
+           border:none;
+           margin-top:10px;
+           margin-bottom:20px;
+           font-size:12px;
+           font-family:宋体;
+       }
+       #cart_info_step
+       {
+           float:left;
+           clear:right;
+           height:32px;
+           width:960px;
+           border:none;
+           overflow:hidden;
+       }
+       /*address_start*/
+       #address
+       {
+           float:left;
+           clear:right;
+           height:auto;
+           width:960px;
+           border:2px solid #eeeee0;
+           margin-top:10px;
+       }
+       #address_left
+       {
+           height:auto;
+           width:120px;
+           min-height:200px;
+           _height:200px;
+           float:left;
+           background-color:#eeeee0;
+           text-align:center;
+           font-size:18px;
+           color:#555;
+       }
+       #address_right
+       {
+           height:auto;
+           width:840px;
+           float:left;
+           clear:right;
+       }
+       #address_right table
+       {
+           height:auto;
+           width:840px;
+           border:none;
+           line-height:30px;
+       }
+       #address_right table tr
+       {
+           height:30px;
+           width:840px;
+           border:none;
+       }
+       #address_right table tr .td1
+       {
+           height:30px;
+           width:120px;
+           border:none;
+           text-align:center;
+           float:left;
+       }
+       #address_right table tr .td2
+       {
+           height:30px;
+           width:720px;
+           float:left;
+           clear:right;
+       }
+       .must
+       {
+           color:#ff0000;
+       }
+       /*address_end*/
+     
+       /*over_start*/
+       #over
+       {
+           float:left;
+           clear:right;
+           height:auto;
+           width:960px;
+           border:2px solid #eeeee0;
+           margin-top:10px;
+           margin-bottom:20px;
+       }
+       #over_left
+       {
+           height:100%;
+           width:120px;
+           float:left;
+           background-color:#eeeee0;
+           text-align:center;
+           font-size:18px;
+           color:#555;
+       }
+        #over_right
+       {
+           height:auto;
+           width:840px;
+           float:left;
+           clear:right;
+       }
+        #over_right table
+       {
+           height:auto;
+           width:840px;
+           border:none;
+           line-height:30px;
+       }
+       #over_right table tr
+       {
+           height:30px;
+           width:840px;
+           border:none;
+       }
+       #over_right table tr .td1
+       {
+           height:30px;
+           width:120px;
+           border:none;
+           text-align:center;
+           float:left;
+       }
+       #over_right table tr .td2
+       {
+           height:30px;
+           width:720px;
+           float:left;
+           clear:right;
+       }
+       /*over_end*/
+       

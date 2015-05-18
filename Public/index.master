@@ -1,0 +1,229 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="index.master.cs" Inherits="Public_index" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>校园手机淘宝</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link href="../css/index_master.css" rel="stylesheet" type="text/css" />
+    <script src="../js/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <script src="../js/Mask.js" type="text/javascript"></script>
+    <script src="../js/Mask2.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .confloat
+        {
+            position:absolute;
+            background-image:url(../images/back.png);
+            background-color:White;
+            border-bottom:2px solid #CC0000;
+            top: 24px;
+            left: 0px;
+            width:100%;
+            z-index:1000;
+        }
+        .menu
+        {
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+  <form id="form1" runat="server">
+  <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div> 
+        <div class="top">
+           <div class="top_info">
+              <div class="top_info_center">
+                 <p class="p1"><asp:Label ID="lblMsg" runat="server"></asp:Label>
+                  <a href="#" onclick="openDiv('newDiv');" style="cursor:pointer">
+                      <asp:Label ID="lblLogin" runat="server" Text="[登录]" ToolTip="登录"></asp:Label></a>
+                   <a href="#" onclick="openDiv2('newDiv2');" style="cursor:pointer">
+                       <asp:Label ID="lblRegister" runat="server" Text="[免费注册]" ToolTip="免费注册"></asp:Label></a>
+                     <asp:Button ID="btnQuit" runat="server" Text="[注销]" ForeColor="#BD2424"  BackColor="#EEEEE0"
+                       Height="23px" Width="49px" BorderStyle="None" onclick="btnQuit_Click1" /></p> 
+                 <p class="p0">
+                        <asp:LinkButton ID="lbtnFirstPage" runat="server" Font-Underline="False" 
+                            onclick="lbtnFirstPage_Click" ForeColor="#CC0000" ToolTip="淘宝首页">淘宝首页</asp:LinkButton>
+                        <asp:Label ID="Label2" runat="server" Text="| 关于我们"></asp:Label>
+                  </p>
+              </div>
+           </div>
+           <div class="top_logo">
+           <div id="newDiv2">
+                 <table cellpadding="0" cellspacing="0">
+                     <tr id="tr12"><td class="td12">免费注册</td><td class="td23"></td><td class="td12"></td><td class="td23"><a id="close2"><font color="#000" style="cursor:pointer;">关闭</font></a></td></tr>
+                      <tr class="tr12"><td class="td12">用户名：</td><td class="td23">
+                          <asp:TextBox ID="txtUserName" runat="server" Height="30px" Width="250px" 
+                              BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+                          </td></tr>
+                          <tr class="tr12"><td class="td12">真实姓名：</td><td class="td23">
+                          <asp:TextBox ID="txtRealName" runat="server" Height="30px" Width="250px" 
+                                  BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+                          </td></tr>
+                          <tr class="tr12"><td class="td12">电子邮箱：</td><td class="td23">
+                             <asp:TextBox ID="txtEmail" runat="server" Height="30px" Width="250px" 
+                                  BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+                           </td></tr>
+                          <tr class="tr12"><td class="td12">联系电话：</td><td class="td23">
+                          <asp:TextBox ID="txtTelPhone" runat="server" Height="30px" Width="250px" 
+                                  BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+                          </td></tr>                     
+                         
+                          <tr class="tr12"><td class="td12">常用地址：</td><td class="td23">
+                          <asp:TextBox ID="txtStreet" runat="server" Height="30px" Width="250px" 
+                                  BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+                          </td></tr>
+                       <tr class="tr12"><td class="td12">密码：</td><td class="td23">
+                           <asp:TextBox ID="txtNewPwd" runat="server" Height="30px" Width="250px" 
+                               TextMode="Password" BorderColor="#8A8A8A" BorderStyle="Solid" 
+                               BorderWidth="1px"></asp:TextBox>
+                           </td></tr>
+                        <tr class="tr12"><td class="td12">确认密码：</td><td class="td23">
+                            <asp:TextBox ID="txtAckPwd" runat="server" Height="30px" Width="250px" 
+                                TextMode="Password" BorderColor="#8A8A8A" BorderStyle="Solid" 
+                                BorderWidth="1px"></asp:TextBox>
+                            </td>
+                            <td class="td23">
+                                <asp:CompareValidator ID="CompareValidator1" runat="server"  ControlToCompare="txtNewPwd"  ControlToValidate="txtAckPwd" ErrorMessage="密码不一致！" ForeColor="Red"></asp:CompareValidator>
+                            </td>
+                            </tr>
+                          <tr class="tr12"><td class="td12">安全问题：</td><td class="td23">
+                              <asp:TextBox ID="txtQuestion" runat="server" Height="30px" Width="250px" 
+                                  BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+                              </td></tr>
+                           <tr class="tr12"><td class="td12">问题答案：</td><td class="td23">
+                               <asp:TextBox ID="txtAnswer" runat="server" Height="30px" Width="250px" 
+                                   BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+                               </td></tr>                       
+                            <tr class="tr12"><td class="td12"></td><td class="td23">
+                                <asp:Button ID="btnRegister" runat="server" BackColor="#cc0000" BorderColor="#cc0000" 
+                                    Font-Bold="False" Font-Size="X-Large" ForeColor="White" Height="35px" Text="注册" 
+                                    Width="250px"  OnClick="btnRegister_Click" CssClass="btnCss"/>
+                                </td></tr>
+                 </table>
+              </div>
+           <div class="confloat" id="confloat">
+              <div class="top_logo_center">
+                 <div class="logo">
+                     <p class="p4">校园手机淘宝</p>
+                     <p class="p5">xiaoyuanshoujitaobao</p>
+                 </div>
+                 <div class="search">
+                    <div class="search_center">
+                        <div class="search1">
+                        <asp:DropDownList ID="ddlcondition" runat="server" 
+                            Height="34px" Width="60px">
+                            <asp:ListItem>手机</asp:ListItem>
+                            <asp:ListItem>店铺</asp:ListItem>
+                        </asp:DropDownList>
+                        </div>
+                        <div class="search2">
+                        <asp:TextBox ID="txtSearch" runat="server" BorderColor="#006600" placeholder="要搜索手机或店铺，请输入关键词"
+                            BorderStyle="Solid" BorderWidth="2px" Height="34px" Width="300px"></asp:TextBox>
+                        </div>
+                        <div class="search3">
+                        <asp:Button ID="btnSearch" runat="server" BackColor="#006600" 
+                            BorderColor="#006600" BorderStyle="Solid" BorderWidth="2px" ForeColor="White" 
+                            Height="38px" Text="   搜索" Width="90px" onclick="btnSearch_Click" />
+                        </div>
+                     </div>
+                 </div>
+                 <script type="text/javascript">
+                     $.fn.smartFloat = function () {
+                         var position = function (element) {
+                             var top = element.position().top, pos = element.css("position");
+                             $(window).scroll(function () {
+                                 var scrolls = $(this).scrollTop();
+                                 if (scrolls > top) {
+                                     if (window.XMLHttpRequest) {
+                                         element.css({
+                                             position: "fixed",
+                                             top: 0
+                                         });
+                                     } else {
+                                         element.css({
+                                             top: scrolls
+                                         });
+                                     }
+                                 } else {
+                                     element.css({
+                                         position: pos,
+                                         top: top
+                                     });
+                                 }
+                             });
+                         };
+                         return $(this).each(function () {
+                             position($(this));
+                         });
+                     };
+                     //绑定
+                     $("#confloat").smartFloat();
+</script>
+               </div>
+           </div>
+           </div>
+           <div class="top_menu">
+              <div class="top_menu_center">
+                 <div id="menu_left">全部手机分类<small><small>▼</small></small></div>
+                 <div id="menu_right">
+                    <ul>
+                        <asp:Menu ID="Menu1" runat="server" 
+                            DataSourceID="SiteMapDataSource1" ForeColor="White" Orientation="Horizontal" 
+                            StaticDisplayLevels="2" EnableViewState="False" CssClass="menu1" 
+                            Height="30px">
+                        </asp:Menu>
+                    </ul>
+                 </div>
+              </div>
+           </div>
+        </div>
+          <div id="newDiv">
+           <table cellpadding="0" cellspacing="0">
+              <tr id="tr1"><td class="td1">登录</td><td class="td2"><span style="margin-left:360px"><a id="close"><font color="#000" style="cursor:pointer;">关闭</font></a></span></td></tr>
+               <tr class="tr2"><td class="td1">用户名：</td><td class="td2">
+                   <asp:TextBox ID="txtUser" runat="server" Height="30px" Width="280px" BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+                   </td></tr>
+                <tr class="tr2"><td class="td1">密码：</td><td class="td2">
+                    <asp:TextBox ID="txtPwd" runat="server" Height="30px" TextMode="Password" 
+                        Width="280px" BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+                    </td></tr>
+                 <tr class="tr2"><td class="td1"></td>
+                     <td class="td2"><asp:CheckBox ID="CheckBox1" runat="server" />记住用户名&nbsp;&nbsp;&nbsp;
+                     <a><asp:LinkButton ID="lbtnFindPwd" runat="server" ForeColor="red" OnClick="lbtnFindPwd_Click">忘记密码</asp:LinkButton></a></td></tr>
+                 <tr class="tr2">
+                 <td class="td1"></td>
+                 <td class="td2">
+                     <asp:Button ID="btnUserLogin" runat="server" Height="40px" Text="登录" 
+                         Width="285px"  OnClick="btnUserLogin_Click"
+                         BackColor="#CC0000" BorderColor="#CC0000" Font-Size="X-Large" 
+                         ForeColor="White" CssClass="btnCss" />
+                     </td></tr>
+           </table>
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">  
+        </asp:ContentPlaceHolder>
+        <div class="bottom">
+           <div class="bottom_logo">
+              <div class="bottom_logo_center">
+                 <p class="p6">■享正品&nbsp;有保障</p>
+                 <p class="p7">❤新服务&nbsp;新体验</p>
+                 <p class="p8">▲种类全&nbsp;配送广</p>
+              </div>
+           </div>
+           <div class="bottom_info">
+              <div class="bottom_info_center">
+                 <p class="p9"><a href="#">网站首页</a>|<a href="#">关于校园手机淘宝</a>|<a href="#">产品分类</a>|<a href="#">联系我们</a></p>
+                 <p class="p10">客服热线：400-800-8800&nbsp; Copyright © 2015湖北大学 12计科2班第五组</p>
+              </div>
+           </div>
+        </div>
+    </div>
+    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+    </form>
+</body>
+</html>

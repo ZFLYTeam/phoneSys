@@ -1,0 +1,266 @@
+﻿ *
+{
+    margin:0;
+    padding:0;
+    font-size: medium;
+}
+ul
+{
+    list-style:none;
+}
+a
+{
+    text-decoration:none;
+    color:#b22222;
+}
+a:hover
+{
+    text-decoration:underline;
+    color:#ff9900;
+}
+.top,.bottom
+{
+    border:none;
+    width:100%;
+    height:140px;
+}
+.top_info,.bottom_logo,.top_info_center,.bottom_logo_center
+{
+    border:none;
+    height:25px;
+}
+.top_logo,.top_logo_center,.bottom_info_center
+{
+    border:none;
+    height:85px;
+}
+.bottom_info
+{
+    border:none;
+    height:100px;
+}
+.top_menu,.bottom_img,.top_menu_center,.bottom_img_center
+{
+    border:none;
+    height:35px;
+}
+.top_info_center,.top_logo_center,.top_menu_center,.bottom_logo_center,.bottom_info_center,.bottom_img_center
+{
+    margin:0 auto;
+    width:960px;
+}
+.top_info
+{
+    background-color:#eeeee0;
+}
+
+/*.top_menu*/
+.top_menu
+{
+    background-color:#cc0000;
+}
+#menu_left
+{
+    height:35px;
+    width:200px;
+    float:left;
+    line-height:30px;
+    text-align:center;
+    font-family:黑体;
+    font-size:20px;
+    color:#ffffff;
+}
+#menu_right
+{
+    height:35px;
+    width:600px;
+    line-height:35px;
+    float:left;
+    clear:right;
+}
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #ce0000;
+    border: 1px #ce0000 solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.0em;
+    padding: 6px 0px;
+    text-decoration: none;
+    white-space:nowrap;
+ }
+.menu ul li
+{
+    width:100px;
+}
+
+.p0
+{
+    line-height:20px;
+    width:500px;
+    text-align:right;
+    float:right;
+}
+.p1
+{
+    line-height:20px;
+    width:257px;
+    text-align:inherit;
+    float:left;
+}
+.p2
+{
+    line-height:20px;
+    width:137px;
+    text-align:inherit;
+    float:left;
+    color:#b22222;
+}
+.p3
+{
+    line-height:20px;
+    width:180px;
+    text-align:inherit;
+    float:left;
+    width:600px;
+    text-align:right;
+}
+
+/*.logo*/
+.logo
+{
+    width:280px;
+    height:85px;
+    float:left;
+}
+.p4
+{
+    font-family:华文行楷;
+    color:#ff0000;
+    height:50px;
+    font-size:40px;
+    width:280px;
+    text-align:center;
+}
+.p5
+{
+    color:#ff0000;
+    font-size:x-large;
+    height:35px;
+    line-height:25px;
+    width:280px;
+    text-align:center;
+}
+
+/*.search*/
+.search
+{
+    width:680px;
+    height:85px;
+    float:left;
+    clear:right;
+}
+.search_center
+{
+    line-height:34px;
+    width:380px;
+    height:34px;
+    margin-left:310px;
+    margin-top:32px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+/*bottom_logo*/
+.bottom_logo
+{
+    width:100%;
+    float:left;
+    clear:right;
+    background-color:#eeeee0;
+}
+.p6,.p7,.p8
+{
+    width:320px;
+    height:25px;
+    line-height:25px;
+    text-align:center;
+    font-family:宋体;
+    font-size:large;
+    font-weight:bold;
+    color:#cd2626;
+    line-height:20px;
+    float:left;
+}
+.p9 
+{
+    width:960px;
+    height:20px;
+    line-height:20px;
+    font-size:medium;
+    float:left;
+    clear:right;
+    text-align:center;
+}
+.p9 a
+{
+    color:#555;
+    font-family:宋体;
+}
+.p10
+{
+    width:960px;
+    height:20px;
+    line-height:20px;
+    float:left;
+    clear:right;
+    color:#555;
+    text-align:center;
+}
+.zhifu
+{
+    width:960px;
+    height:35px;
+    float:left;
+    clear:right;  
+}
+
+/*#newDiv*/
+#newDiv
+{
+   display:none;
+   width:500px;
+   height:270px;
+   background:#fff;
+   margin-left:400px;
+   padding:10px;
+   border:10px solid #ddd;
+}
+#newDiv table{width:100%;height:100%;font-size:15px;}
+#newDiv #tr1{height:30px;background:#fff;border-bottom:1px solid #f00;}
+#close:hover font{color:#f00;}
+#newDiv .tr2{height:60px;}
+#newDiv .td1{width:100px;}
+#newDiv .td2{width:400px;}
+/*open-over*/
+#newDiv2
+{
+    display:none;
+    width:500px;
+    height:430px;
+    background:#fff;
+    margin-left:400px;
+    padding:10px;
+    border:10px solid #ddd;
+}
+#newDiv2 table{width:100%;height:100%;font-size:15px;}
+#newDiv2 #tr12{height:30px;background:#fff;border-bottom:1px solid #f00;}
+#close2:hover font{color:#f00;}
+#newDiv2 .tr12{height:30px;}
+#newDiv2 .td12{width:250px;}
+#newDiv2 .td23{width:250px;}
+
+.btnCss{text-align:center;}
+
+/*返回顶部*/
+.scroll{width:35px;height:80px;background:#ccc;color:#555;line-height:20px;text-align:center;position:fixed;right:10px;bottom:50px;cursor:pointer;font-size:12px;}

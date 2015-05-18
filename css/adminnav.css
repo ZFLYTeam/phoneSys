@@ -1,0 +1,30 @@
+﻿#conten
+{
+    margin:10px auto 10px auto;
+    padding:0;
+    width:960px;
+    height:auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-family:Arial,"宋体";
+}
+#left
+{
+    width:200px;
+    height:auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    border:1px solid #cd2626;
+    float:left;
+}
+#right
+{
+    width:745px;
+    height:auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    border:1px solid #cd2626;
+    margin-left:10px;
+    float:left;
+    clear:right;
+}

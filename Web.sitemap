@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+   <siteMapNode url="~/Public/index.aspx" title="首页"  description="" >
+
+     <siteMapNode url="" title="信息维护"  description="" roles="卖家,买家" >
+       <siteMapNode url="~/Public/UpdateInfo.aspx" title="个人信息"  description="" ></siteMapNode>
+       <siteMapNode url="~/Public/Pwdreset.aspx" title="修改密码"  description="" ></siteMapNode>
+     </siteMapNode>
+     <siteMapNode url="" title="收藏夹" description="" roles="买家,卖家">
+       <siteMapNode url="~/Buyer/CollectedPhone.aspx" title="收藏的宝贝"  description="" ></siteMapNode>
+       <siteMapNode url="~/Buyer/CollectedShop.aspx" title="收藏的店铺"  description=""></siteMapNode>
+     </siteMapNode>
+     <siteMapNode url="" title="购物车" description="" roles="买家,卖家">
+       <siteMapNode url="~/Buyer/ShoppingCart.aspx" title="查看购物车"  description="" ></siteMapNode>
+        </siteMapNode>
+     <siteMapNode url="" title="我的订单" description="" roles="买家,卖家">
+       <siteMapNode url="~/Buyer/OrderInfo.aspx" title="订单详情"  description="" ></siteMapNode>
+     </siteMapNode>
+     <siteMapNode url="" title="店铺申请" description="" roles="买家">
+       <siteMapNode url="~/Buyer/ApplyShop.aspx" title="我要开店"  description="" ></siteMapNode>
+     </siteMapNode>
+     <siteMapNode url="" title="卖家中心"  description="" roles="卖家">
+       <siteMapNode url="~/Seller/My_Shop.aspx" title="我的店铺"  description="" ></siteMapNode>
+       <siteMapNode url="~/Seller/Seller_Info.aspx" title="店铺信息"  description="" ></siteMapNode>
+       <siteMapNode url="~/Seller/Publish.aspx" title="商品发布"  description="" ></siteMapNode>
+       <siteMapNode url="~/Seller/OrderManage.aspx" title="订单管理"  description="" ></siteMapNode>
+       <siteMapNode url="~/Seller/Estimate.aspx" title="评价管理"  description="" ></siteMapNode>
+     </siteMapNode>
+
+     <siteMapNode url="~/Admin/shopexamine.aspx" title="店铺管理"  description="" roles="管理员">
+     </siteMapNode>
+     <siteMapNode url="~/Admin/goodsmanage.aspx" title="商品管理"  description="" roles="管理员">
+     </siteMapNode>
+     <siteMapNode url="~/Admin/Brandmanage.aspx" title="手机属性管理"  description="" roles="管理员">
+     </siteMapNode>
+     <siteMapNode url="~/Admin/usermanage.aspx" title="用户管理"  description="" roles="管理员">
+     </siteMapNode>
+     <siteMapNode url="~/Admin/goodscompmanage.aspx" title="投诉管理"  description="" roles="管理员">
+     </siteMapNode>
+
+   </siteMapNode>
+</siteMap>
