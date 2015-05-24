@@ -9,7 +9,7 @@ a:hover{text-decoration:underline;color:#ff9900;}
 .top_logo,.top_logo_center,.bottom_info_center{border:none;height:85px;}
 .bottom_info{border:none;height:100px;}
 .top_menu,.bottom_img,.top_menu_center,.bottom_img_center{border:none;height:35px;}
-.top_info_center,.top_logo_center,.top_menu_center,.bottom_logo_center,.bottom_info_center,.bottom_img_center{margin:0 auto;width:960px;}
+.top_info_center,.top_logo_center,.top_menu_center,.bottom_logo_center,.bottom_info_center,.bottom_img_center{margin:0 auto;width:1160px;}
 .top_info{background-color:#eeeee0;}
 .top_menu{background-color:#CC0000;width:100%;}
 
@@ -49,7 +49,7 @@ a:hover{text-decoration:underline;color:#ff9900;}
     line-height:20px;
     width:500px;
     text-align:right;
-    float:left;
+    float:right;
 }
 .p1
 {

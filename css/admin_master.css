@@ -1,5 +1,4 @@
 ﻿ *{margin:0;padding:0;font-size: medium;}
-body{font-size:12px; background-image:url("../images/back.gif")}
 .box{width:960px;height:800px;margin:0 auto;margin-top:10px;margin-bottom:20px;border:1px solid #C00;background:#fff;}
 a{text-decoration:none; color:#b22222;}
 a:hover{text-decoration:underline;color:#ff9900;}
@@ -9,7 +8,7 @@ a:hover{text-decoration:underline;color:#ff9900;}
 .top_logo,.top_logo_center,.bottom_info_center{border:none;height:85px;}
 .bottom_info{border:none;height:115px;}
 .top_menu,.bottom_img,.top_menu_center,.bottom_img_center{ border:none; height:35px;}
-.top_info_center,.top_logo_center,.top_menu_center,.bottom_logo_center,.bottom_info_center,.bottom_img_center{ margin:0 auto;width:960px;}
+.top_info_center,.top_logo_center,.top_menu_center,.bottom_logo_center,.bottom_info_center,.bottom_img_center{ margin:0 auto;width:1160px;}
 .top_info{ background-color:#eeeee0;}
 .top_menu{background-color:#c00;}
 

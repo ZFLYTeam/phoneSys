@@ -14,7 +14,10 @@ public partial class Public_MoreGoods : System.Web.UI.Page
     protected static PagedDataSource pds = new PagedDataSource();
     protected void Page_Load(object sender, EventArgs e)
     {
-            BindDatalist(0);
+            
+            if (!IsPostBack) {
+                BindDatalist(0);
+            }
     }
 
     private void BindDatalist(int currentpage)

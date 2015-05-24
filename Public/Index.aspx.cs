@@ -37,7 +37,7 @@ public partial class Public_Index : System.Web.UI.Page
             pds.DataSource = ds.Tables[0].DefaultView;
 
             pds.AllowPaging = true;
-            pds.PageSize = 5;
+            pds.PageSize = 4;
             pds.CurrentPageIndex = currentPage - 1;
 
             LnkBtnFirst.Enabled = true;
@@ -78,7 +78,7 @@ public partial class Public_Index : System.Web.UI.Page
             pds2.DataSource = ds.Tables[0].DefaultView;
 
             pds2.AllowPaging = true;
-            pds2.PageSize = 5;
+            pds2.PageSize = 4;
             pds2.CurrentPageIndex = currentPage2 - 1;
 
             LnkBtnFirst2.Enabled = true;
@@ -119,7 +119,7 @@ public partial class Public_Index : System.Web.UI.Page
             pds3.DataSource = ds.Tables[0].DefaultView;
 
             pds3.AllowPaging = true;
-            pds3.PageSize = 5;
+            pds3.PageSize = 4;
             pds3.CurrentPageIndex = currentPage3 - 1;
 
             LnkBtnFirst3.Enabled = true;

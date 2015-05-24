@@ -19,8 +19,15 @@ public partial class Public_index : System.Web.UI.MasterPage
                 btnQuit.Visible = true;
                 lblLogin.Visible = false;
                 lblRegister.Visible = false;
-                Menu1.Visible = true;
-                Menu1.Enabled = true;
+                if (Session["name"].ToString().Equals("admin"))
+                {
+                    publicNav.Visible = false;
+                    adminNav.Visible = true;
+                }
+                else {
+                    publicNav.Visible = true;
+                    adminNav.Visible = false;
+                }
             }
             else
             {
@@ -28,8 +35,8 @@ public partial class Public_index : System.Web.UI.MasterPage
                 btnQuit.Visible = false;
                 lblRegister.Visible = true;
                 lblLogin.Visible = true;
-                Menu1.Enabled = false;
-                Menu1.Visible = false;
+                publicNav.Visible = false;
+                adminNav.Visible = false;
             }
         }
     }
