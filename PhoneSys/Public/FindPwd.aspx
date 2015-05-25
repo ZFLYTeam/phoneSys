@@ -52,7 +52,7 @@
                     <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtNewPwd"
                         ControlToValidate="txtConfirmPwd" ErrorMessage="两次输入密码不一致!" ForeColor="Red"></asp:CompareValidator></div>
                 <div class="controls">
-                <asp:Button Text="保存"  ID="ibtnSave" runat="server" OnClick="ibtnSave_Click" />
+                <asp:Button Text="保存"  ID="ibtnSave" runat="server" onclick="ibtnSave_Click"/>
                 </div>
             </div>
         </div>

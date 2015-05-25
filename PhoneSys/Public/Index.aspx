@@ -24,9 +24,8 @@
                     <li class="dropdown-submenu"><a href="#" tabindex="-1">手机操作系统</a>
                         <ul class="dropdown-menu">
                             <li><a href="PhoneSearch.aspx?phonekeyword=安卓">安卓</a></li>
-                            <li><a href="PhoneSearch.aspx?phonekeyword=微软">微软</a></li>
-                            <li><a href="PhoneSearch.aspx?phonekeyword=塞班">塞班</a></li>
                             <li><a href="PhoneSearch.aspx?phonekeyword=IOS">IOS</a></li>
+                            <li><a href="PhoneSearch.aspx?phonekeyword=微软">微软</a></li>
                         </ul>
                     </li>
                     <li class="dropdown-submenu"><a href="#" tabindex="-1">手机屏幕大小</a>
@@ -208,65 +207,65 @@
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
-    </div>
-    <!--推荐商品部分结束-->
-    <!--新商品部分开始-->
-    <div class=" row-fluid">
-        <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-            <ContentTemplate>
-                <div class="span12">
-                    <div class="page-header">
-                        <h2>
-                            新品上市<a class="btn btn-info" href="MoreGoods.aspx">查看更多 »</a>
-                        </h2>
-                    </div>
-                    <div style="text-align: center">
-                        <asp:DataList ID="DataList3" runat="server" RepeatColumns="4" RepeatDirection="Horizontal">
-                            <ItemTemplate>
-                                <div style="width: 280px">
-                                    <div class="thumbnail" style="margin-top: 5px">
-                                        <a href="GoodsInfo.aspx?PhoneId=<%#Eval("phone_id") %>">
-                                            <asp:Image ID="imgGoodsPhoto" runat="server" ImageUrl='<%# Eval("phone_image") %>'
-                                                Height="198px" CssClass="imgCss" Style="text-align: center" /></a>
-                                        <div class="caption">
-                                            <div style="height: 40px">
-                                                <h5>
-                                                    <a href="GoodsInfo.aspx?PhoneId=<%#Eval("phone_id") %>">
-                                                        <%#Eval("phone_name")%></a> <span style="color: Red">
-                                                            <li class="fa fa-cny"></li>
-                                                            <%#Eval("price")%></span>元
-                                                </h5>
+        </div>
+        <!--推荐商品部分结束-->
+        <!--新商品部分开始-->
+        <div class=" row-fluid">
+            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                <ContentTemplate>
+                    <div class="span12">
+                        <div class="page-header">
+                            <h2>
+                                新品上市<a class="btn btn-info" href="MoreGoods.aspx">查看更多 »</a>
+                            </h2>
+                        </div>
+                        <div style="text-align: center">
+                            <asp:DataList ID="DataList3" runat="server" RepeatColumns="4" RepeatDirection="Horizontal">
+                                <ItemTemplate>
+                                    <div style="width: 280px">
+                                        <div class="thumbnail" style="margin-top: 5px">
+                                            <a href="GoodsInfo.aspx?PhoneId=<%#Eval("phone_id") %>">
+                                                <asp:Image ID="imgGoodsPhoto" runat="server" ImageUrl='<%# Eval("phone_image") %>'
+                                                    Height="198px" CssClass="imgCss" Style="text-align: center" /></a>
+                                            <div class="caption">
+                                                <div style="height: 40px">
+                                                    <h5>
+                                                        <a href="GoodsInfo.aspx?PhoneId=<%#Eval("phone_id") %>">
+                                                            <%#Eval("phone_name")%></a> <span style="color: Red">
+                                                                <li class="fa fa-cny"></li>
+                                                                <%#Eval("price")%></span>元
+                                                    </h5>
+                                                </div>
+                                                <asp:LinkButton ID="LinkButton1" runat="server" Style="color: Blue" OnClick="LinkButton1_Click2"
+                                                    PostBackUrl='<%#"~/public/GoodsInfo.aspx?PhoneId="+Eval("phone_id")%>'>详细信息</asp:LinkButton>
+                                                <asp:LinkButton ID="lbtnInChart2" runat="server" Style="color: Blue" OnClick="lbtnInChart2_Click"
+                                                    CommandArgument='<%# Eval("phone_id") %>'>加入购物车</asp:LinkButton>
                                             </div>
-                                            <asp:LinkButton ID="LinkButton1" runat="server" Style="color: Blue" OnClick="LinkButton1_Click2"
-                                                PostBackUrl='<%#"~/public/GoodsInfo.aspx?PhoneId="+Eval("phone_id")%>'>详细信息</asp:LinkButton>
-                                            <asp:LinkButton ID="lbtnInChart2" runat="server" Style="color: Blue" OnClick="lbtnInChart2_Click"
-                                                CommandArgument='<%# Eval("phone_id") %>'>加入购物车</asp:LinkButton>
                                         </div>
                                     </div>
-                                </div>
-                            </ItemTemplate>
-                        </asp:DataList>
-                        <div id="pagenation3">
-                            总共页码为:[<asp:Label ID="Lbl_Count3" runat="server" Text="10"></asp:Label>] 当前页码为：[<asp:Label
-                                ID="Lbl_NowPage3" runat="server" Text="1"></asp:Label>]
-                            <div class="btn-toolbar">
-                                <div class="btn-group">
-                                    <asp:Button ID="LnkBtnFirst3" runat="server" Text="第一页" OnClick="LnkBtnFirst3_Click"
-                                        CssClass="btn" />
-                                    <asp:Button ID="LnkBtnFront3" runat="server" Text="上一页" OnClick="LnkBtnFront3_Click"
-                                        CssClass="btn" />
-                                    <asp:Button ID="LnkBtnNext3" runat="server" Text="下一页" OnClick="LnkBtnNext3_Click"
-                                        CssClass="btn" />
-                                    <asp:Button ID="LnkBtnlast3" runat="server" Text="最后一页" OnClick="LnkBtnlast3_Click"
-                                        CssClass="btn" />
+                                </ItemTemplate>
+                            </asp:DataList>
+                            <div id="pagenation3">
+                                总共页码为:[<asp:Label ID="Lbl_Count3" runat="server" Text="10"></asp:Label>] 当前页码为：[<asp:Label
+                                    ID="Lbl_NowPage3" runat="server" Text="1"></asp:Label>]
+                                <div class="btn-toolbar">
+                                    <div class="btn-group">
+                                        <asp:Button ID="LnkBtnFirst3" runat="server" Text="第一页" OnClick="LnkBtnFirst3_Click"
+                                            CssClass="btn" />
+                                        <asp:Button ID="LnkBtnFront3" runat="server" Text="上一页" OnClick="LnkBtnFront3_Click"
+                                            CssClass="btn" />
+                                        <asp:Button ID="LnkBtnNext3" runat="server" Text="下一页" OnClick="LnkBtnNext3_Click"
+                                            CssClass="btn" />
+                                        <asp:Button ID="LnkBtnlast3" runat="server" Text="最后一页" OnClick="LnkBtnlast3_Click"
+                                            CssClass="btn" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </ContentTemplate>
-        </asp:UpdatePanel>
-    </div>
-    <!--新商品部分结束-->
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+        <!--新商品部分结束-->
     </div>
 </asp:Content>

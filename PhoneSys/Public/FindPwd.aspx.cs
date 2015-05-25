@@ -65,7 +65,10 @@ public partial class Public_ResetPwd : System.Web.UI.Page
             ScriptManager.RegisterStartupScript(this, GetType(), "", "alert('对不起！\\n\\n用户名不存在，请重新输入！');", true);
         }
     }
-    protected void ibtnSave_Click(object sender, ImageClickEventArgs e)
+
+
+
+    protected void ibtnSave_Click(object sender, EventArgs e)
     {
         register_addpwd common = new register_addpwd();
         string salt = common.GenerateSalt().ToString();
@@ -74,14 +77,14 @@ public partial class Public_ResetPwd : System.Web.UI.Page
         QueriesTableAdapter amtup = new QueriesTableAdapter();
         int count = amtup.aspnet_Membership_ResetPassword("/", txtUserName.Text, pwd, 1, 1, salt, DateTime.Now, 1, txtAnswer.Text);
         if (count != 0)
-        {  
+        {
             ScriptManager.RegisterStartupScript(this, GetType(), "", "alert('恭喜您！\\n\\n密码设置成功！');", true);
             txtUserName.Text = "";
             txtNewPwd.Text = "";
             txtConfirmPwd.Text = "";
             txtAnswer.Text = "";
             //  Response.Write("<Script>alert('')</Script>");
-          
+
             Response.Redirect("../Public/Index.aspx");
         }
         else

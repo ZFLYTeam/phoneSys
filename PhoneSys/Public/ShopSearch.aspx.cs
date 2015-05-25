@@ -11,7 +11,7 @@ using ViewDateSetTableAdapters;
 
 public partial class Public_ShopSearch : System.Web.UI.Page
 {
-    string keyword = "";
+    String keywords ="";
     protected static PagedDataSource pds = new PagedDataSource();
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -35,7 +35,7 @@ public partial class Public_ShopSearch : System.Web.UI.Page
                 Menu1.Enabled = false;
                 Menu1.Visible = false;
             }
-            keyword = Request.QueryString["shopshkeyword"].ToString();
+            keywords = Context.Request["shopshkeyword"].ToString();
             BindDatalist(0);
         }
     }
@@ -46,7 +46,7 @@ public partial class Public_ShopSearch : System.Web.UI.Page
         pds.PageSize = 5;
         pds.CurrentPageIndex = currentpage;
 
-        if (keyword == "")
+        if (keywords == "")
         {
             searchshopinfo_view1TableAdapter userDA = new searchshopinfo_view1TableAdapter();
             DataTable userdt = userDA.GetData();
@@ -60,7 +60,7 @@ public partial class Public_ShopSearch : System.Web.UI.Page
         else
         {
             shop_selectinfo_view1TableAdapter shopinfoda = new shop_selectinfo_view1TableAdapter();
-            DataTable shopinfodt = shopinfoda.Getshopinfobylike('%' + keyword + '%');
+            DataTable shopinfodt = shopinfoda.Getshopinfobylike('%' + keywords + '%');
             if (shopinfodt.Rows.Count > 0)
             {
                 pds.DataSource = shopinfodt.DefaultView;
@@ -250,7 +250,7 @@ public partial class Public_ShopSearch : System.Web.UI.Page
     }
     protected void btnSearch_Click(object sender, EventArgs e)
     {
-        keyword = txtSearch.Text;
+        keywords = txtSearch.Text;
         BindDatalist(0);
     }
     protected void btnQuit_Click1(object sender, EventArgs e)

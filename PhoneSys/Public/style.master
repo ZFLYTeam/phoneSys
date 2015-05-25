@@ -1,7 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="style.master.cs" Inherits="Public_style" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
@@ -11,7 +10,8 @@
     <link href="../libs/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
     <link href="../libs/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
     <link href="../libs/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <asp:ContentPlaceHolder id="head" runat="server">
+    <script type="text/javascript" src="../libs/bootstrap/js/jquery.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -114,11 +114,11 @@
                                 </span></a><a href="Index.aspx" class="brand">ZFLY</a>
                             <div class="nav-collapse collapse navbar-responsive-collapse">
                                 <ul class="nav">
-                                <li><a href="../Admin/shopexamine.aspx">店铺管理</a> </li>
-                                <li><a href="../Admin/goodsmanage.aspx">商品管理</a> </li>
-                                <li><a href="../Admin/Brandmanage.aspx">手机属性管理</a> </li>
-                                <li><a href="../Admin/usermanage.aspx">用户管理</a> </li>
-                                <li><a href="../Admin/goodscompmanage.aspx">投诉管理</a> </li>
+                                    <li><a href="../Admin/shopexamine.aspx">店铺管理</a> </li>
+                                    <li><a href="../Admin/goodsmanage.aspx">商品管理</a> </li>
+                                    <li><a href="../Admin/Brandmanage.aspx">手机属性管理</a> </li>
+                                    <li><a href="../Admin/usermanage.aspx">用户管理</a> </li>
+                                    <li><a href="../Admin/goodscompmanage.aspx">投诉管理</a> </li>
                                 </ul>
                             </div>
                         </div>
@@ -128,14 +128,13 @@
             <!--导航结束-->
         </div>
         <!--rowEnd-->
-          <div style="padding-top: 25px; height: auto; min-height: 400px; _height: 500px;">
+        <div style="padding-top: 25px; height: auto; min-height: 400px; _height: 500px;">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </div>
     <!--contianorEnd-->
     <div>
-
         <div class="container">
             <div class="row-fluid">
                 <div class="span12">
@@ -281,7 +280,6 @@
         </div>
         <!--注册框结束-->
     </form>
-        <script type="text/javascript" src="../libs/bootstrap/js/jquery.min.js"></script>
     <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../libs/bootstrap-select/js/bootstrap-select.js"></script>
     <script type="text/javascript">

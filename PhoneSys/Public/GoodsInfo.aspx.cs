@@ -77,10 +77,6 @@ public partial class Public_GoodInfo : System.Web.UI.Page
                  ibtnMoveCart.Visible = false;
                  ibtnCollect.Enabled = false;
                  ibtnCollect.Visible = false;
-                 lbtnAdd.Enabled = false;
-                 lbtnAdd.Visible = false;
-                 lbtnSub.Enabled = false;
-                 lbtnSub.Visible = false;
                  txtNum.Enabled = false;
                  txtNum.Visible = false;
                  lblStore.Enabled = false;
@@ -93,27 +89,6 @@ public partial class Public_GoodInfo : System.Web.UI.Page
              {
                  lblShow6.Enabled = false;
                  lblShow6.Visible = false;
-             }
-
-             Panel1.Visible = true;
-             Panel2.Visible = false;
-             btnDetail.BackColor = Color.FromArgb(255, 255, 255);
-             btnEstimate.BackColor = Color.FromArgb(234, 237, 241);
-             if (int.Parse(txtNum.Text) <= 1)
-             {
-                 lbtnSub.Enabled = false;
-             }
-             else
-             {
-                 lbtnSub.Enabled = true;
-             }
-             if (int.Parse(txtNum.Text) >= int.Parse(lblStore.Text))
-             {
-                 lbtnAdd.Enabled = false;
-             }
-             else
-             {
-                 lbtnAdd.Enabled = true;
              }
     }
     private void BindDatalist(int currentpage)
@@ -378,20 +353,6 @@ public partial class Public_GoodInfo : System.Web.UI.Page
         //    }
         //}     
     }
-    protected void btnDetail_Click(object sender, EventArgs e)
-    {
-        Panel1.Visible = true;
-        Panel2.Visible = false;
-        btnDetail.BackColor = Color.FromArgb(255,255,255);
-        btnEstimate.BackColor = Color.FromArgb(234, 237, 241);
-    }
-    protected void btnEstimate_Click(object sender, EventArgs e)
-    {
-        Panel1.Visible = false;
-        Panel2.Visible = true;
-        btnEstimate.BackColor = Color.FromArgb(255, 255, 255);
-        btnDetail.BackColor = Color.FromArgb(234, 237, 241);
-    }
     protected void dlEstimate_ItemCommand(object source, DataListCommandEventArgs e)
     {
         switch (e.CommandName)
@@ -460,48 +421,6 @@ public partial class Public_GoodInfo : System.Web.UI.Page
                 lbtnNext.Enabled = false;
                 lbtnLast.Enabled = false;
             }
-        }
-    }
-    protected void lbtnSub_Click(object sender, EventArgs e)
-    {
-        txtNum.Text = (int.Parse(txtNum.Text) - 1).ToString();
-        lblAllPrice.Text = (int.Parse(txtNum.Text) * int.Parse(lblGoodsPrice.Text)).ToString();
-        if (int.Parse(txtNum.Text) <= 1)
-        {
-            lbtnSub.Enabled = false;
-        }
-        else
-        {
-            lbtnSub.Enabled = true;
-        }
-        if (int.Parse(txtNum.Text) >= int.Parse(lblStore.Text))
-        {
-            lbtnAdd.Enabled = false;
-        }
-        else
-        {
-            lbtnAdd.Enabled = true;
-        }
-    }
-    protected void lbtnAdd_Click(object sender, EventArgs e)
-    {
-        txtNum.Text = (int.Parse(txtNum.Text) + 1).ToString();
-        lblAllPrice.Text = (int.Parse(txtNum.Text) * int.Parse(lblGoodsPrice.Text)).ToString();
-        if (int.Parse(txtNum.Text) <= 1)
-        {
-            lbtnSub.Enabled = false;
-        }
-        else
-        {
-            lbtnSub.Enabled = true;
-        }
-        if (int.Parse(txtNum.Text) >= int.Parse(lblStore.Text))
-        {
-            lbtnAdd.Enabled = false;
-        }
-        else
-        {
-            lbtnAdd.Enabled = true;
         }
     }
 }

@@ -143,8 +143,6 @@
                 </div>
             </div>
         </div>
-   
-    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
     </form>
 </body>
 
