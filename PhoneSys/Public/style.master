@@ -6,149 +6,296 @@
 <head id="Head1" runat="server">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <title>校园手机淘宝</title>
-    <link href="../css/style_master.css" rel="stylesheet" type="text/css" />
-    <script src="../js/Mask.js" type="text/javascript"></script>
-    <script src="../js/Mask2.js" type="text/javascript"></script>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link href="../libs/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../libs/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="../libs/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="../libs/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <div class="top">
-           <div class="top_info">
-              <div class="top_info_center">
-                 <p class="p1"><asp:Label ID="lblMsg" runat="server"></asp:Label>
-                    <a href="#" onclick="openDiv('newDiv');" style="cursor:pointer">
-                      <asp:Label ID="lblLogin" runat="server" Text="[登录]" ToolTip="登录"></asp:Label></a>
-                   <a href="#" onclick="openDiv2('newDiv2');" style="cursor:pointer">
-                       <asp:Label ID="lblRegister" runat="server" Text="[免费注册]" ToolTip="免费注册"></asp:Label></a>
-                     <asp:Button ID="btnQuit"
-                             runat="server" Text="[注销]" ForeColor="#BD2424"  BackColor="#EEEEE0" 
-                         Height="20px" Width="50px" 
-                         BorderStyle="None" onclick="btnQuit_Click1" ToolTip="注销" 
-                         CausesValidation="False"/></p>
-                     <p class="p0">
-                        <asp:LinkButton ID="lbtnFirstPage" runat="server" Font-Underline="False" 
-                            onclick="lbtnFirstPage_Click" ToolTip="淘宝首页">淘宝首页</asp:LinkButton>
-                        <asp:Label ID="Label2" runat="server" Text="| 关于我们"></asp:Label>
-                  </p>
-              </div>
-           </div>
-           <div id="newDiv2">
-                 <table cellpadding="0" cellspacing="0">
-                     <tr id="tr12"><td class="td12">免费注册</td><td class="td23"></td><td class="td12"></td><td class="td23"><a id="close2"><font color="#000" style="cursor:pointer">关闭</font></a></td></tr>
-                      <tr class="tr12"><td class="td12">用户名：</td><td class="td23">
-                          <asp:TextBox ID="txtUserName" runat="server" Height="30px" Width="250px" BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                          </td></tr>
-                          <tr class="tr12"><td class="td12">真实姓名：</td><td class="td23">
-                          <asp:TextBox ID="txtRealName" runat="server" Height="30px" Width="250px" BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                          </td></tr>
-                          <tr class="tr12"><td class="td12">电子邮箱：</td><td class="td23">
-                             <asp:TextBox ID="txtEmail" runat="server" Height="30px" Width="250px" BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                           </td></tr>
-                          <tr class="tr12"><td class="td12">联系电话：</td><td class="td23">
-                          <asp:TextBox ID="txtTelPhone" runat="server" Height="30px" Width="250px" BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                          </td></tr>                     
-                          <tr class="tr12"><td class="td12">常用地址：</td><td class="td23">
-                          <asp:TextBox ID="txtAddress" runat="server" Height="30px" Width="250px" BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                          </td></tr>
-                       <tr class="tr12"><td class="td12">密码：</td><td class="td23">
-                           <asp:TextBox ID="txtNewPwd" runat="server" Height="30px" Width="250px" BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px" 
-                               TextMode="Password"></asp:TextBox>
-                           </td></tr>
-                        <tr class="tr12"><td class="td12">确认密码：</td><td class="td23">
-                            <asp:TextBox ID="txtAckPwd" runat="server" Height="30px" Width="250px" BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px" 
-                                TextMode="Password"></asp:TextBox>
-                            </td>
-                            <td class="td23">
-                                <asp:CompareValidator ID="CompareValidator1" runat="server"  ControlToCompare="txtNewPwd"  ControlToValidate="txtAckPwd" ErrorMessage="密码不一致！" ForeColor="Red"></asp:CompareValidator>
-                            </td>
-                            </tr>
-                          <tr class="tr12"><td class="td12">安全问题：</td><td class="td23">
-                              <asp:TextBox ID="txtQuestion" runat="server" Height="30px" Width="250px" BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                              </td></tr>
-                           <tr class="tr12"><td class="td12">问题答案：</td><td class="td23">
-                               <asp:TextBox ID="txtAnswer" runat="server" Height="30px" Width="250px" BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                               </td></tr>                       
-                            <tr class="tr12"><td class="td12"></td><td class="td23">
-                                <asp:Button ID="Button1" runat="server" BackColor="#cc0000" BorderColor="#cc0000" 
-                                    Font-Bold="False" Font-Size="X-Large" ForeColor="White" Height="35px" Text="注册" 
-                                    Width="250px"  OnClick="btnRegister_Click" CssClass="btnCss" />
-                                </td></tr>
-                 </table>
-              </div>
-           <div class="top_logo">
-              <div class="top_logo_center">
-                  <div class="logo">
-                      <p class="p4">校园手机淘宝</p>
-                    <p class="p5">xiaoyuanshoujitaobao</p>
-                 </div>
-                 <div class="info">
-                       <ul class="ul1">
-                          <li></li>
-                          <li></li>
-                       </ul>
-                 </div>
-               </div>
-           </div>
-           <div class="top_menu">
-              <div class="top_menu_center">
-                 <div id="menu_left"><small><small></small></small></div>
-                 <div id="menu_right">
-                    <ul>
-                        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" 
-                            EnableViewState="False" Font-Size="Medium" 
-                      Orientation="Horizontal" StaticDisplayLevels="2" 
-                         Width="100%" CssClass="menu" ForeColor="White">
-                        </asp:Menu>
-                    </ul>
-                 </div>
-              </div>
-           </div>
-        </div> 
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <asp:Label ID="lblMsg" runat="server"></asp:Label>
+                <a href="#" onclick="logIn()" style="cursor: pointer">
+                    <asp:Label ID="lblLogin" runat="server" Text="[登录]" ToolTip="登录"></asp:Label></a>
+                <a href="#" onclick="signIn()" style="cursor: pointer">
+                    <asp:Label ID="lblRegister" runat="server" Text="[免费注册]" ToolTip="免费注册"></asp:Label></a>
+                <asp:Button ID="btnQuit" runat="server" Text="[注销]" Height="23px" Width="49px" BorderStyle="None"
+                    OnClick="btnQuit_Click1" /></div>
+            <div class="span4">
+            </div>
+            <div class="span4" style="text-align: right">
+                <asp:LinkButton ID="lbtnFirstPage" runat="server" Font-Underline="False" OnClick="lbtnFirstPage_Click"
+                    ForeColor="#CC0000" ToolTip="淘宝首页">淘宝首页</asp:LinkButton>
+                <asp:Label ID="Label2" runat="server" Text="| 关于我们"></asp:Label>
+            </div>
+        </div>
+        <!--rowBegin-->
+        <div class="row">
+            <div class="span4">
+                <h1 style="color: #FF6633">
+                    校园手机淘宝</h1>
+            </div>
+            <div class="span8" style="padding-top: 10px; text-align: right">
+            </div>
+            <!--买家卖家导航开始-->
+            <div class="span12" style="height: 20px">
+            </div>
+            <div id="publicNav" class="span12" style="padding-top: 15px" runat="server">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="container-fluid">
+                            <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar">
+                                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+                                </span></a><a href="../Public/Index.aspx" class="brand">ZFLY</a>
+                            <div class="nav-collapse collapse navbar-responsive-collapse">
+                                <ul class="nav">
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">收藏夹<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Buyer/CollectedPhone.aspx">收藏的宝贝</a> </li>
+                                            <li><a href="../Buyer/CollectedShop.aspx">收藏的店铺</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">查看购物车<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Buyer/ShoppingCart.aspx">购物车</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">我的订单<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Buyer/OrderInfo.aspx">订单详情</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">我要开店<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Buyer/ApplyShop.aspx">店铺申请</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">我是卖家<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Seller/My_Shop.aspx">我的店铺</a> </li>
+                                            <li><a href="../Seller/Seller_Info.aspx">店铺信息</a> </li>
+                                            <li><a href="../Seller/Publish.aspx">商品发布</a> </li>
+                                            <li><a href="../Seller/OrderManage.aspx">订单管理</a> </li>
+                                            <li><a href="../Seller/Estimate.aspx">评价管理</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="nav pull-right">
+                                    <li class="divider-vertical"></li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">信息维护<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Public/UpdateInfo.aspx">个人信息</a> </li>
+                                            <li><a href="../Public/Pwdreset.aspx">修改密码</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="adminNav" class="span12" runat="server">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="container-fluid">
+                            <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar">
+                                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+                                </span></a><a href="Index.aspx" class="brand">ZFLY</a>
+                            <div class="nav-collapse collapse navbar-responsive-collapse">
+                                <ul class="nav">
+                                <li><a href="../Admin/shopexamine.aspx">店铺管理</a> </li>
+                                <li><a href="../Admin/goodsmanage.aspx">商品管理</a> </li>
+                                <li><a href="../Admin/Brandmanage.aspx">手机属性管理</a> </li>
+                                <li><a href="../Admin/usermanage.aspx">用户管理</a> </li>
+                                <li><a href="../Admin/goodscompmanage.aspx">投诉管理</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--导航结束-->
+        </div>
+        <!--rowEnd-->
+          <div style="padding-top: 25px; height: auto; min-height: 400px; _height: 500px;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </div>
-         <div id="newDiv">
-           <table cellpadding="0" cellspacing="0">
-              <tr id="tr1"><td class="td1">登录</td><td class="td2"><span style="margin-left:360px"><a id="close"><font color="#000" style="cursor:pointer">关闭</font></a></span></td></tr>
-               <tr class="tr2"><td class="td1">用户名：</td><td class="td2">
-                   <asp:TextBox ID="txtUser" runat="server" Height="30px" Width="280px" BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                   </td></tr>
-                <tr class="tr2"><td class="td1">密码：</td><td class="td2">
-                    <asp:TextBox ID="txtPwd" runat="server" Height="30px" TextMode="Password" 
-                        Width="280px" BorderColor="#8A8A8A" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                    </td></tr>
-                 <tr class="tr2"><td class="td1"></td>
-                     <td class="td2"><asp:CheckBox ID="CheckBox1" runat="server" />记住用户名&nbsp;&nbsp;&nbsp; <a><asp:LinkButton ID="lbtnFindPwd" runat="server" ForeColor="red" OnClick="lbtnFindPwd_Click">忘记密码</asp:LinkButton></a></td></tr>
-                 <tr class="tr2"><td class="td1"></td><td class="td2">
-                     <asp:Button ID="btnUserLogin" runat="server" Height="40px" Text="登录" 
-                         Width="285px"  OnClick="btnUserLogin_Click"
-                         BackColor="#cc0000" BorderColor="#cc0000" Font-Size="X-Large" 
-                         ForeColor="White" CssClass="btnCss" />
-                     </td></tr>
-           </table>
+    <!--contianorEnd-->
+    <div>
+
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div style="text-align: center">
+                        Copyright © 2014-2015 ZFLY版权所有
+                    </div>
+                </div>
+            </div>
         </div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-        <div class="bottom">
-           <div class="bottom_logo">
-              <div class="bottom_logo_center">
-                 <p class="p6">■享正品&nbsp;有保障</p>
-                 <p class="p7">❤新服务&nbsp;新体验</p>
-                 <p class="p8">▲种类全&nbsp;配送广</p>
-              </div>
-           </div>
-           <div class="bottom_info">
-              <div class="bottom_info_center">
-                 <p class="p9"><a href="#">网站首页</a>|<a href="#">关于校园手机淘宝</a>|<a href="#">产品分类</a>|<a href="#">联系我们</a></p>
-                 <p class="p10">客服热线：400-800-8800&nbsp; Copyright © 2015湖北大学 12计科2班第五组</p>
-                 <div style="width:960px;height:50px;float:left;"></div>
-              </div>
-           </div>
+        <!--注册模态框开始-->
+        <div id="modelSignIn" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×</button>
+                <h3 id="myModalLabel">
+                    用户注册
+                </h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="txtUserName">
+                            用户名</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="txtUserName">
+                            真实姓名</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtRealName" runat="server"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="txtEmail">
+                            电子邮箱</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="txtTelPhone">
+                            联系电话</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtTelPhone" runat="server"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="txtAddress">
+                            常用地址</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="txtNewPwd">
+                            密码</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtNewPwd" runat="server" TextMode="Password"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="txtAckPwd">
+                            确认密码</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtAckPwd" runat="server" TextMode="Password"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="txtQuestion">
+                            安全问题</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtQuestion" runat="server"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="txtQuestion">
+                            问题答案</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtAnswer" runat="server"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <label>
+                                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtNewPwd"
+                                    ControlToValidate="txtAckPwd" ErrorMessage="密码不一致！" ForeColor="Red"></asp:CompareValidator></label>
+                            <asp:Button ID="btnRegister" runat="server" Text="注册" Width="220px" OnClick="btnRegister_Click"
+                                CssClass="btn btn-success" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">
+                    取消</button>
+            </div>
         </div>
-   
-    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+        <!--注册框结束-->
+        <!--登录模态框开始-->
+        <div id="modalLogin" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×</button>
+                <h3 id="H1">
+                    用户登录
+                </h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="txtUserName">
+                            用户名</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtUser" runat="server"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="txtUserName">
+                            密码</label>
+                        <div class="controls">
+                            <asp:TextBox ID="txtPwd" runat="server" TextMode="Password"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <label>
+                                <asp:CheckBox ID="CheckBox1" runat="server" />记住用户名&nbsp;&nbsp;&nbsp; <a>
+                                    <asp:LinkButton ID="lbtnFindPwd" runat="server" ForeColor="red" OnClick="lbtnFindPwd_Click">忘记密码</asp:LinkButton></a><br />
+                                <asp:Button ID="btnUserLogin" runat="server" Text="登录" Width="220px" OnClick="btnUserLogin_Click"
+                                    CssClass="btn btn-success" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">
+                    取消</button>
+            </div>
+        </div>
+        <!--注册框结束-->
     </form>
+        <script type="text/javascript" src="../libs/bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap-select/js/bootstrap-select.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.selectpicker').selectpicker();
+            $('.bootstrap-select').width('75px');
+        });
+
+        function logIn() {
+            $('#modalLogin').modal('show');
+        }
+        function signIn() {
+            $('#modelSignIn').modal('show');
+        }
+    </script>
 </body>
 </html>

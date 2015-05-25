@@ -5,51 +5,125 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>校园手机淘宝</title>
-    <link href="../css/style_master.css" rel="stylesheet" type="text/css" />
-    <script src="../js/Mask.js" type="text/javascript"></script>
-    <script src="../js/Mask2.js" type="text/javascript"></script>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link href="../libs/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../libs/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="../libs/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="../libs/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <div class="top">
-           <div class="top_info">
-              <div class="top_info_center">
-                 <p class="p1">&nbsp;</p>
-                     <p class="p0">
-                        <asp:LinkButton ID="lbtnFirstPage" runat="server" Font-Underline="True" 
-                            onclick="lbtnFirstPage_Click">淘宝首页</asp:LinkButton>
-                        <asp:Label ID="Label2" runat="server" Text="| 关于我们"></asp:Label>
-                  </p>
-              </div>
-           </div>
-           <div class="top_logo">
-              <div class="top_logo_center">
-                  <div class="logo">
-                      <p class="p4">校园手机淘宝</p>
-                    <p class="p5">&nbsp;&nbsp;xiaoyuanshoujitaobao</p>
-                 </div>
-                 <div class="info">
-                       <ul class="ul1">
-                          <li></li>
-                          <li></li>
-                       </ul>
-                 </div>
-               </div>
-           </div>
-           <div class="top_menu">
-              <div class="top_menu_center">
-                 <div id="menu_left"></div>
-                 <div id="menu_right">
-                    <ul>
-                       
-                    </ul>
-                 </div>
-              </div>
-           </div>
-        </div> 
+<div class="container">
+        <div class="row">
+            <div class="span4"></div>
+            <div class="span4">
+            </div>
+            <div class="span4" style="text-align: right">
+                <asp:LinkButton ID="lbtnFirstPage" runat="server" Font-Underline="False" OnClick="lbtnFirstPage_Click"
+                    ForeColor="#CC0000" ToolTip="淘宝首页">淘宝首页</asp:LinkButton>
+                <asp:Label ID="Label2" runat="server" Text="| 关于我们"></asp:Label>
+            </div>
+        </div>
+        <!--rowBegin-->
+        <div class="row">
+            <div class="span4">
+                <h1 style="color: #FF6633">
+                    校园手机淘宝</h1>
+            </div>
+            <div class="span8" style="padding-top: 10px; text-align: right">
+            </div>
+            <!--买家卖家导航开始-->
+            <div class="span12" style="height: 20px">
+            </div>
+            <div id="publicNav" class="span12" style="padding-top: 15px" runat="server">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="container-fluid">
+                            <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar">
+                                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+                                </span></a><a href="Index.aspx" class="brand">ZFLY</a>
+                            <div class="nav-collapse collapse navbar-responsive-collapse">
+                                <ul class="nav">
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">收藏夹<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Buyer/CollectedPhone.aspx">收藏的宝贝</a> </li>
+                                            <li><a href="../Buyer/CollectedShop.aspx">收藏的店铺</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">查看购物车<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Buyer/ShoppingCart.aspx">购物车</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">我的订单<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Buyer/OrderInfo.aspx">订单详情</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">我要开店<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Buyer/ApplyShop.aspx">店铺申请</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">我是卖家<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Seller/My_Shop.aspx">我的店铺</a> </li>
+                                            <li><a href="../Seller/Seller_Info.aspx">店铺信息</a> </li>
+                                            <li><a href="../Seller/Publish.aspx">商品发布</a> </li>
+                                            <li><a href="../Seller/OrderManage.aspx">订单管理</a> </li>
+                                            <li><a href="../Seller/Estimate.aspx">评价管理</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="nav pull-right">
+                                    <li class="divider-vertical"></li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">信息维护<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Public/UpdateInfo.aspx">个人信息</a> </li>
+                                            <li><a href="../Public/Pwdreset.aspx">修改密码</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="adminNav" class="span12" runat="server">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="container-fluid">
+                            <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar">
+                                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+                                </span></a><a href="Index.aspx" class="brand">ZFLY</a>
+                            <div class="nav-collapse collapse navbar-responsive-collapse">
+                                <ul class="nav">
+                                <li><a href="../Admin/shopexamine.aspx">店铺管理</a> </li>
+                                <li><a href="../Admin/goodsmanage.aspx">商品管理</a> </li>
+                                <li><a href="../Admin/Brandmanage.aspx">手机属性管理</a> </li>
+                                <li><a href="../Admin/usermanage.aspx">用户管理</a> </li>
+                                <li><a href="../Admin/goodscompmanage.aspx">投诉管理</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--导航结束-->
+        </div>
+        <!--rowEnd-->
+          <div style="padding-top: 25px; height: auto; min-height: 400px; _height: 500px;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </div>
 
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
@@ -60,22 +134,14 @@
          </ContentTemplate>
     </asp:UpdatePanel>       
         </asp:ContentPlaceHolder>
-        <div class="bottom">
-           <div class="bottom_logo">
-              <div class="bottom_logo_center">
-                 <p class="p6">■享正品&nbsp;有保障</p>
-                 <p class="p7">❤新服务&nbsp;新体验</p>
-                 <p class="p8">▲种类全&nbsp;配送广</p>
-              </div>
-           </div>
-           <div class="bottom_info">
-              <div class="bottom_info_center">
-                 <p class="p9"><a href="#">网站首页</a>|<a href="#">关于校园手机淘宝</a>|<a href="#">产品分类</a>|<a href="#">联系我们</a></p>
-                 <p class="p10">客服热线：400-800-8800&nbsp; Copyright © 2015湖北大学 版权所有 12计科2班第五组</p>
-                 <div class="zhifu"><img src="../images/zf.jpg" alt=""/></div>
-              </div>
-           </div>
-           
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div style="text-align: center">
+                        Copyright © 2014-2015 ZFLY版权所有
+                    </div>
+                </div>
+            </div>
         </div>
    
     <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />

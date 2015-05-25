@@ -1,11 +1,13 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Public_style" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>校园手机淘宝</title>
-    <link href="../css/admin_master.css" rel="stylesheet" type="text/css" />
+    <link href="../libs/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../libs/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="../libs/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="../libs/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <script type="text/javascript">
         var LastLeftID = "";
         function menuFix() {
@@ -64,142 +66,206 @@
         }
         GetMenuID(); //*这两个function的顺序要注意一下，不然在Firefox里GetMenuID()不起效果
         menuFix();
-</script>
-    <asp:ContentPlaceHolder id="head" runat="server">
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-
     <form id="form1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
-    <div class="content">
-        <div class="top">
-           <div class="top_info">
-              <div class="top_info_center">
-                 <p class="p1">
-                     <asp:Label ID="lblMsg" runat="server"></asp:Label>
-                     <asp:Button ID="btnQuit"
-                             runat="server" Text="[注销]" ForeColor="Red" Height="23px" Width="50px" 
-                         BorderStyle="None" onclick="btnQuit_Click1"/></p>
-                    <p class="p0">
-                        <asp:LinkButton ID="lbtnFirstPage" runat="server" Font-Underline="False" 
-                            onclick="lbtnFirstPage_Click" ForeColor="#CC0000" ToolTip="淘宝首页">淘宝首页</asp:LinkButton>
-                        <asp:Label ID="Label2" runat="server" Text="| 关于我们"></asp:Label>
-                  </p>
-
-              </div>
-              <div >
-              
-              </div>
-           </div>
-           <div class="top_logo">
-              <div class="top_logo_center">
-                  <div class="logo">
-                      <p class="p4">校园手机淘宝</p>
-                    <p class="p5">xiaoyuanshoujitaobao</p>
-                 </div>
-                  <div class="search"></div>
-              </div>
-           </div>
-           <div class="top_menu">
-              <div class="top_menu_center">
-                 <div id="Div1">
-                    <ul>
-                        <asp:Menu ID="Menu2" runat="server" DataSourceID="SiteMapDataSource1" 
-                            EnableViewState="False" Font-Size="Medium" 
-                      Orientation="Horizontal" StaticDisplayLevels="2" 
-                         Width="100%" CssClass="menu" ForeColor="White" Font-Bold="True" 
-                            Font-Italic="False">
-                        </asp:Menu>
-                    </ul>
-                 </div>
-              </div>
-           </div>
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <asp:Label ID="lblMsg" runat="server"></asp:Label>
+                <a href="#" onclick="logIn()" style="cursor: pointer">
+                    <asp:Label ID="lblLogin" runat="server" Text="[登录]" ToolTip="登录"></asp:Label></a>
+                <a href="#" onclick="signIn()" style="cursor: pointer">
+                    <asp:Label ID="lblRegister" runat="server" Text="[免费注册]" ToolTip="免费注册"></asp:Label></a>
+                <asp:Button ID="btnQuit" runat="server" Text="[注销]" Height="23px" Width="49px" BorderStyle="None"
+                    OnClick="btnQuit_Click1" /></div>
+            <div class="span4">
+            </div>
+            <div class="span4" style="text-align: right">
+                <asp:LinkButton ID="lbtnFirstPage" runat="server" Font-Underline="False" OnClick="lbtnFirstPage_Click"
+                    ForeColor="#CC0000" ToolTip="淘宝首页">淘宝首页</asp:LinkButton>
+                <asp:Label ID="Label2" runat="server" Text="| 关于我们"></asp:Label>
+            </div>
         </div>
-        <div class="box">
-        <div class="left">
-           <div class="left_center">
-            <div id="PARENT">
-<ul id="nav">
-<li><a href="#Menu=ChildMenu1"  onclick="DoMenu('ChildMenu1')">手机属性管理</a>
- <ul id="ChildMenu1" class="collapsed">
- <li><a href="../Admin/BrandAdd.aspx">添加手机品牌</a></li>
- <li><a href="../Admin/ColorAdd.aspx">添加手机颜色</a></li>
- <li><a href="../Admin/CpuAdd.aspx">添加内核类型</a></li>
- <li><a href="../Admin/OSadd.aspx">添加系统类型</a></li>
- <li><a href="../Admin/PixelAdd.aspx">添加像素类型</a></li>
- <li><a href="../Admin/ScreenAdd.aspx">添加屏幕尺寸</a></li>
- <li><a href="../Admin/PriceintervalAdd.aspx">添加价格区间</a></li>
- <li><a href="../Admin/Brandmanage.aspx">手机品牌管理</a></li>
- <li><a href="../Admin/Colormanage.aspx">手机颜色管理</a></li>
- <li><a href="../Admin/Cpumanage.aspx">内核类型管理</a></li>
- <li><a href="../Admin/Osmanage.aspx">操作系统管理</a></li>
- <li><a href="../Admin/pixelmanage.aspx">手机像素管理</a></li>
- <li><a href="../Admin/Screenmanage.aspx">屏幕尺寸管理</a></li>
- <li><a href="../Admin/Priceintervalmanage.aspx">价格区间管理</a></li>
- </ul>
-</li>
-
-<li><a href="#Menu=ChildMenu2" onclick="DoMenu('ChildMenu2')">店铺管理</a>
- <ul id="ChildMenu2" class="collapsed">
- <li><a href="../Admin/shopexamine.aspx">店铺审核管理</a></li>
- <li><a href="../Admin/shopfreeze.aspx">店铺冻结</a></li>
- </ul>
- </li>
-
-
-<li><a href="#Menu=ChildMenu3" onclick="DoMenu('ChildMenu3')">商品管理</a>
- <ul id="ChildMenu3" class="collapsed">
- <li><a href="../Admin/goodsmanage.aspx">商品审核</a></li>
- <li><a href="../Admin/goodsispass.aspx">商品权限管理</a></li>
- <li><a href="../Admin/goodstempfreeze.aspx">临时冻结管理</a></li>
- <li><a href="../Admin/goodsfreezelong.aspx">永久冻结商品</a></li>
- </ul>
- </li> 
-
-<li><a href="#Menu=ChildMenu4" onclick="DoMenu('ChildMenu4')">投诉管理</a>
- <ul id="ChildMenu4" class="collapsed">
- <li><a href="../Admin/goodscompmanage.aspx">商品投诉管理</a></li>
- <li><a href="../Admin/shopcommanage.aspx">店铺投诉管理</a></li>
- </ul>
-</li>
-
-<li><a href="#Menu=ChildMenu5" onclick="DoMenu('ChildMenu5')">用户权限管理</a>
- <ul id="ChildMenu5" class="collapsed">
- <li><a href="../Admin/usermanage.aspx">用户冻结管理</a></li>
- <li><a href="../Admin/userunlock.aspx">用户解冻管理</a></li>
- </ul>
-</li>
-</ul>
-        </div> 
+        <div class="row">
+            <div class="span4">
+                <h1 style="color: #FF6633">
+                    校园手机淘宝</h1>
+            </div>
+            <div class="span8" style="padding-top: 10px; text-align: right">
+            </div>
+            <!--买家卖家导航开始-->
+            <div class="span12" style="height: 20px">
+            </div>
+            <div id="publicNav" class="span12" style="padding-top: 15px" runat="server">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="container-fluid">
+                            <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar">
+                                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+                                </span></a><a href="../Public/Index.aspx" class="brand">ZFLY</a>
+                            <div class="nav-collapse collapse navbar-responsive-collapse">
+                                <ul class="nav">
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">收藏夹<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Buyer/CollectedPhone.aspx">收藏的宝贝</a> </li>
+                                            <li><a href="../Buyer/CollectedShop.aspx">收藏的店铺</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">查看购物车<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Buyer/ShoppingCart.aspx">购物车</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">我的订单<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Buyer/OrderInfo.aspx">订单详情</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">我要开店<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Buyer/ApplyShop.aspx">店铺申请</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">我是卖家<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Seller/My_Shop.aspx">我的店铺</a> </li>
+                                            <li><a href="../Seller/Seller_Info.aspx">店铺信息</a> </li>
+                                            <li><a href="../Seller/Publish.aspx">商品发布</a> </li>
+                                            <li><a href="../Seller/OrderManage.aspx">订单管理</a> </li>
+                                            <li><a href="../Seller/Estimate.aspx">评价管理</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="nav pull-right">
+                                    <li class="divider-vertical"></li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">信息维护<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="../Public/UpdateInfo.aspx">个人信息</a> </li>
+                                            <li><a href="../Public/Pwdreset.aspx">修改密码</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="adminNav" class="span12" runat="server">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="container-fluid">
+                            <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar">
+                                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+                                </span></a><a href="Index.aspx" class="brand">ZFLY</a>
+                            <div class="nav-collapse collapse navbar-responsive-collapse">
+                                <ul class="nav">
+                                    <li><a href="../Admin/shopexamine.aspx">店铺管理</a> </li>
+                                    <li><a href="../Admin/goodsmanage.aspx">商品管理</a> </li>
+                                    <li><a href="../Admin/Brandmanage.aspx">手机属性管理</a> </li>
+                                    <li><a href="../Admin/usermanage.aspx">用户管理</a> </li>
+                                    <li><a href="../Admin/goodscompmanage.aspx">投诉管理</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--导航结束-->
         </div>
+        <!--管理员折叠栏开始-->
+        <div class="row">
+            <div class="span4">
+                <ul id="nav">
+                    <li><a href="#Menu=ChildMenu1" onclick="DoMenu('ChildMenu1')">手机属性管理</a>
+                        <ul id="ChildMenu1" class="collapsed">
+                            <li><a href="../Admin/BrandAdd.aspx">添加手机品牌</a></li>
+                            <li><a href="../Admin/ColorAdd.aspx">添加手机颜色</a></li>
+                            <li><a href="../Admin/CpuAdd.aspx">添加内核类型</a></li>
+                            <li><a href="../Admin/OSadd.aspx">添加系统类型</a></li>
+                            <li><a href="../Admin/PixelAdd.aspx">添加像素类型</a></li>
+                            <li><a href="../Admin/ScreenAdd.aspx">添加屏幕尺寸</a></li>
+                            <li><a href="../Admin/PriceintervalAdd.aspx">添加价格区间</a></li>
+                            <li><a href="../Admin/Brandmanage.aspx">手机品牌管理</a></li>
+                            <li><a href="../Admin/Colormanage.aspx">手机颜色管理</a></li>
+                            <li><a href="../Admin/Cpumanage.aspx">内核类型管理</a></li>
+                            <li><a href="../Admin/Osmanage.aspx">操作系统管理</a></li>
+                            <li><a href="../Admin/pixelmanage.aspx">手机像素管理</a></li>
+                            <li><a href="../Admin/Screenmanage.aspx">屏幕尺寸管理</a></li>
+                            <li><a href="../Admin/Priceintervalmanage.aspx">价格区间管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Menu=ChildMenu2" onclick="DoMenu('ChildMenu2')">店铺管理</a>
+                        <ul id="ChildMenu2" class="collapsed">
+                            <li><a href="../Admin/shopexamine.aspx">店铺审核管理</a></li>
+                            <li><a href="../Admin/shopfreeze.aspx">店铺冻结</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Menu=ChildMenu3" onclick="DoMenu('ChildMenu3')">商品管理</a>
+                        <ul id="ChildMenu3" class="collapsed">
+                            <li><a href="../Admin/goodsmanage.aspx">商品审核</a></li>
+                            <li><a href="../Admin/goodsispass.aspx">商品权限管理</a></li>
+                            <li><a href="../Admin/goodstempfreeze.aspx">临时冻结管理</a></li>
+                            <li><a href="../Admin/goodsfreezelong.aspx">永久冻结商品</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Menu=ChildMenu4" onclick="DoMenu('ChildMenu4')">投诉管理</a>
+                        <ul id="ChildMenu4" class="collapsed">
+                            <li><a href="../Admin/goodscompmanage.aspx">商品投诉管理</a></li>
+                            <li><a href="../Admin/shopcommanage.aspx">店铺投诉管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Menu=ChildMenu5" onclick="DoMenu('ChildMenu5')">用户权限管理</a>
+                        <ul id="ChildMenu5" class="collapsed">
+                            <li><a href="../Admin/usermanage.aspx">用户冻结管理</a></li>
+                            <li><a href="../Admin/userunlock.aspx">用户解冻管理</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="span8">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
         </div>
-        <div class="right">
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-        </div>
-        </div>
-        <div class="bottom">
-           <div class="bottom_logo">
-              <div class="bottom_logo_center">
-                 <p class="p6">■享正品&nbsp;有保障</p>
-                 <p class="p7">❤新服务&nbsp;新体验</p>
-                 <p class="p8">▲种类全&nbsp;配送广</p>
-              </div>
-           </div>
-           <div class="bottom_info">
-              <div class="bottom_info_center">
-                 <p class="p9"><a href="#">网站首页</a>|<a href="#">关于校园手机淘宝</a>|<a href="#">产品分类</a>|<a href="#">联系我们</a></p>
-                 <p class="p10">客服热线：400-800-8800&nbsp; Copyright © 2015湖北大学 12计科2班第五组</p>
-              </div>
-           </div>
-           
-        </div>
+        <!--管理员折叠栏结束-->
     </div>
-    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div style="text-align: center">
+                        Copyright © 2014-2015 ZFLY版权所有
+                    </div>
+                </div>
+            </div>
     </form>
-    
+    <script type="text/javascript" src="../libs/bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap-select/js/bootstrap-select.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.selectpicker').selectpicker();
+            $('.bootstrap-select').width('75px');
+        });
+
+        function logIn() {
+            $('#modalLogin').modal('show');
+        }
+        function signIn() {
+            $('#modelSignIn').modal('show');
+        }
+    </script>
 </body>
 </html>

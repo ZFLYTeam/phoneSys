@@ -15,7 +15,18 @@ public partial class Public_style : System.Web.UI.MasterPage
             {
                 lblMsg.Text = "欢迎您，" + Session["name"].ToString();
                 btnQuit.Visible = true;
-                Menu2.Visible = true;
+                lblLogin.Visible = false;
+                lblRegister.Visible = false;
+                if (Session["name"].ToString().Equals("admin"))
+                {
+                    publicNav.Visible = false;
+                    adminNav.Visible = true;
+                }
+                else
+                {
+                    publicNav.Visible = true;
+                    adminNav.Visible = false;
+                }
             }
             else
             {

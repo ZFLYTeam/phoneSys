@@ -59,7 +59,7 @@
                         <div class="container-fluid">
                             <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar">
                                 <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
-                                </span></a><a href="Index.aspx" class="brand">ZFLY</a>
+                                </span></a><a href="../Public/Index.aspx" class="brand">ZFLY</a>
                             <div class="nav-collapse collapse navbar-responsive-collapse">
                                 <ul class="nav">
                                     <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">收藏夹<strong

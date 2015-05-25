@@ -8,21 +8,28 @@
         <asp:DataList ID="dlPhone" runat="server" RepeatColumns="4" RepeatDirection="Horizontal"
             OnItemCommand="dlPhone_ItemCommand" OnItemDataBound="dlPhone_ItemDataBound">
             <ItemTemplate>
-                <div class="span3" style="text-align: center">
-                    <asp:ImageButton ID="imgbtnPhoto" runat="server" CommandArgument='<%# Eval("phone_id") %>'
-                        Height="150px" ImageUrl='<%# Eval("phone_image") %>' Width="100px" OnClick="imgbtnPhoto_Click" />
-                    <asp:LinkButton ID="lbtnPName" runat="server" CommandArgument='<%# Eval("phone_id") %>'
-                        Text='<%# Eval("phone_name") %>' OnClick="lbtnPName_Click"></asp:LinkButton>
-                    <asp:Label ID="lblPrice" runat="server" Font-Size="X-Large" ForeColor="Firebrick"
-                        Text='<%#"¥"+Eval("price") %>'></asp:Label>
-                    &nbsp;&nbsp;
-                    <asp:Image ID="Image6" runat="server" Height="20px" ImageUrl="~/images/Free.jpg" />
+                <div style="text-align: center;width:280px">
+                    <div class="thumbnail" style="margin-top: 5px">
+                        <asp:ImageButton ID="imgbtnPhoto" runat="server" CommandArgument='<%# Eval("phone_id") %>'
+                            Height="198px" ImageUrl='<%# Eval("phone_image") %>'  OnClick="imgbtnPhoto_Click" />
+                        <div class="caption">
+                            <div style="height: 40px">
+                                <h5>
+                                    <asp:LinkButton ID="lbtnPName" runat="server" CommandArgument='<%# Eval("phone_id") %>'
+                                        Text='<%# Eval("phone_name") %>' OnClick="lbtnPName_Click"></asp:LinkButton>
+                                    <asp:Label ID="lblPrice" runat="server" Font-Size="X-Large" ForeColor="Firebrick"
+                                        Text='<%#"¥"+Eval("price") %>'></asp:Label>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <br />
             </ItemTemplate>
             <FooterTemplate>
                 <div class="row">
-                <div class="span2"></div>
+                    <div class="span2">
+                    </div>
                     <div class="span2">
                         <asp:Label ID="lblCurrentPage" runat="server"></asp:Label>
                         <asp:Label ID="lblCount" runat="server"></asp:Label></div>
@@ -40,9 +47,8 @@
                     </div>
                     <div class="span3">
                         <asp:Label ID="lblSkip" runat="server" ForeColor="Black" Text="跳转至"></asp:Label>
-                        <asp:TextBox ID="txtSkip" runat="server" Width="35px" Wrap="False"
-                            BorderWidth="1px"></asp:TextBox>
-                        &nbsp;<asp:Button ID="btnSkip" runat="server" CommandName="search" Text="Go" CssClass="btn btn-sm" /></div>
+                        <asp:TextBox ID="txtSkip" runat="server" Width="35px" Wrap="False" BorderWidth="1px"></asp:TextBox>
+                        &nbsp;<asp:Button ID="btnSkip" runat="server" CommandName="search" Text="Go" CssClass="btn btn-small btn-primary" /></div>
                 </div>
             </FooterTemplate>
         </asp:DataList>
