@@ -296,7 +296,7 @@
         $(function () {
             $('.selectpicker').selectpicker();
             $('.bootstrap-select').width('75px');
-         });
+        });
 
         function logIn() {
             $('#modalLogin').modal('show');

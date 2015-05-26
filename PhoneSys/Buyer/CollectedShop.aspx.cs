@@ -29,7 +29,7 @@ public partial class Buyer_CollectedShop : System.Web.UI.Page
     private void BindDatalist(int currentpage)
     {
         pds.AllowPaging = true;
-        pds.PageSize = 1;
+        pds.PageSize = 3;
         pds.CurrentPageIndex = currentpage;
 
         BuyerDSTableAdapters.aspnet_UsersTableAdapter userDA = new BuyerDSTableAdapters.aspnet_UsersTableAdapter();
