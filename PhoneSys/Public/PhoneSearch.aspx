@@ -11,7 +11,15 @@
     <link href="../libs/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
     <link href="../libs/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <style type="text/css">
-        label
+        .label
+        {
+            background: #f5f5f5;
+            }
+        .checkbox input[type="checkbox"]
+        {
+            margin-left:0px;
+            }
+       .checkbox label
         {
             position: relative;
             display: inline;
@@ -399,7 +407,7 @@
                                 </td>
                                 <td>
                                     <asp:CheckBoxList ID="cblBrand" runat="server" RepeatDirection="Horizontal" DataSourceID="sdsbrand"
-                                        DataTextField="meaning" DataValueField="brandid">
+                                        DataTextField="meaning" DataValueField="brandid" CssClass="checkbox label">
                                     </asp:CheckBoxList>
                                     <asp:SqlDataSource ID="sdsbrand" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>"
                                         SelectCommand="SELECT [brandid], [identification], [meaning], [comment] FROM [DM_phonebrand]">
@@ -414,7 +422,7 @@
                                 </td>
                                 <td>
                                     <asp:CheckBoxList ID="cblOS" runat="server" RepeatDirection="Horizontal" DataSourceID="sdsos"
-                                        DataTextField="meaning" DataValueField="osid">
+                                        DataTextField="meaning" DataValueField="osid" CssClass="checkbox label">
                                     </asp:CheckBoxList>
                                     <asp:SqlDataSource ID="sdsos" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>"
                                         SelectCommand="SELECT * FROM [DM_os]"></asp:SqlDataSource>
@@ -428,7 +436,7 @@
                                 </td>
                                 <td>
                                     <asp:CheckBoxList ID="cblSreen" runat="server" RepeatDirection="Horizontal" DataSourceID="sdsscreen"
-                                        DataTextField="meaning" DataValueField="screensizeid">
+                                        DataTextField="meaning" DataValueField="screensizeid" CssClass="checkbox label">
                                     </asp:CheckBoxList>
                                     <asp:SqlDataSource ID="sdsscreen" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>"
                                         SelectCommand="SELECT * FROM [DM_screensize]"></asp:SqlDataSource>
@@ -442,7 +450,7 @@
                                 </td>
                                 <td>
                                     <asp:CheckBoxList ID="cblPrice" runat="server" RepeatDirection="Horizontal" DataSourceID="sdsprice"
-                                        DataTextField="priceinterval" DataValueField="priceintid">
+                                        DataTextField="priceinterval" DataValueField="priceintid" CssClass="checkbox label">
                                     </asp:CheckBoxList>
                                     <asp:SqlDataSource ID="sdsprice" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>"
                                         SelectCommand="select priceintid,CONVERT(varchar,low)+'-'+CONVERT(varchar,high) priceinterval
@@ -457,7 +465,7 @@ from DM_priceinterval"></asp:SqlDataSource>
                                 </td>
                                 <td>
                                     <asp:CheckBoxList ID="cblcolor" runat="server" RepeatDirection="Horizontal" DataSourceID="sdscolor"
-                                        DataTextField="meaning" DataValueField="colorid">
+                                        DataTextField="meaning" DataValueField="colorid" CssClass="checkbox label">
                                     </asp:CheckBoxList>
                                     <asp:SqlDataSource ID="sdscolor" runat="server" ConnectionString="<%$ ConnectionStrings:ApplicationServices %>"
                                         SelectCommand="SELECT * FROM [DM_color]"></asp:SqlDataSource>

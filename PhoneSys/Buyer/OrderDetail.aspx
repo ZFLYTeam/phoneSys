@@ -7,69 +7,59 @@
         margin:0 auto;
         padding:0;
         height:100%;
-        width:860px;
-        border:1px solid #ff9900;
+        width:800px;
         margin-top:15px;
         margin-bottom:15px;
     }
      #info
     {
         height:32px;
-        width:860px;
+        width:800px;
         background-color:#eeeee0;
         line-height:32px;
         font-family:黑体;
         font-size:20px;
-        color:#333;
                
     }
      #info1
     {
         height:32px;
-        width:860px;
+        width:800px;
        
         line-height:32px;
-      
-        color:#333;
                
     }
        #info2
     {
         height:96px;
-        width:860px;
+        width:800px;
     
         line-height:32px;
         font-family:黑体;
-        font-size:16px;
-        color:#333;
-        border:1px solid #ff9900;       
+        font-size:16px;   
     }
          #info3
     {
         height:96px;
-        width:860px;
+        width:800px;
         line-height:32px;
         font-family:黑体;
         font-size:16px;
-        color:#333;
-         border:1px solid #ff9900;      
     }
     #cont
     {
         height:262px;
-        width:860px;
-         border:1px solid #ff9900; 
+        width:800px;
     }
         #info4
     {
         margin-top:15px;
         height:32px;
-        width:860px;
+        width:800px;
            background-color:#eeeee0;    
         line-height:32px;
         font-family:黑体;
         font-size:20px;
-        color:#333;
                  
     }
       #info5
@@ -78,14 +68,12 @@
         width:860px;
        
         line-height:32px;
-      
-        color:#333;
                
     }
  #cont1
     {
         height:200px;
-        width:860px;
+        width:800px;
     } 
     
     .style2
@@ -171,8 +159,8 @@
            </div>
     </div>   
     <asp:GridView ID="gvOrderInfo" runat="server" AutoGenerateColumns="False"
-          BackColor="#DEBA84" 
-        BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
+          BackColor="#eeeee0" 
+        BorderColor="#605340" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
         CellSpacing="2" Width="800px" PageSize="1"  >
         <Columns>
         
@@ -242,18 +230,18 @@
 </asp:TemplateField> 
         </Columns>
         <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-        <HeaderStyle BackColor="#A55129" Font-Bold="True" Font-Size="Large" 
-            ForeColor="White" />
+        <HeaderStyle BackColor="#eeeee0" Font-Bold="True" Font-Size="Large" 
+            ForeColor="Black" />
         <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
-        <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
-        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+        <RowStyle BackColor="#ffffff" ForeColor="#8C4510" />
+        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="black" />
         <SortedAscendingCellStyle BackColor="#FFF1D4" />
         <SortedAscendingHeaderStyle BackColor="#B95C30" />
         <SortedDescendingCellStyle BackColor="#F1E5CE" />
         <SortedDescendingHeaderStyle BackColor="#93451F" />
     </asp:GridView>
     <br />
-    <div style="text-align:right;float:left;height:30px; width:860px; border:1px solid #ff9900;  margin-bottom:2px;">   商品总价：<asp:Label 
+    <div style="text-align:right;float:left;height:30px; width:800px; margin-bottom:2px;">   商品总价：<asp:Label 
             ID="lblPay" runat="server" ForeColor="Blue"></asp:Label>
           元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
    
@@ -267,13 +255,15 @@
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    <asp:Label ID="lblCurrentPage" runat="server"></asp:Label>
                    <asp:Label ID="lblCount" runat="server"></asp:Label>
-                   <asp:LinkButton ID="lbtnFirst" runat="server" CommandName="first">首页</asp:LinkButton>
-                   <asp:LinkButton ID="lbtnPre" runat="server" CommandName="pre">上一页</asp:LinkButton>
-                   <asp:LinkButton ID="lbtnNext" runat="server" CommandName="next">下一页</asp:LinkButton>
-                   <asp:LinkButton ID="lbtnLast" runat="server" CommandName="last">尾页</asp:LinkButton>
+                   <div class=" btn-group">
+                   <asp:LinkButton ID="lbtnFirst" runat="server" CommandName="first" CssClass="btn btn-primary">首页</asp:LinkButton>
+                   <asp:LinkButton ID="lbtnPre" runat="server" CommandName="pre" CssClass="btn btn-primary">上一页</asp:LinkButton>
+                   <asp:LinkButton ID="lbtnNext" runat="server" CommandName="next" CssClass="btn btn-primary">下一页</asp:LinkButton>
+                   <asp:LinkButton ID="lbtnLast" runat="server" CommandName="last" CssClass="btn btn-primary">尾页</asp:LinkButton>
+                   </div>
                    <asp:Label ID="lblSkip" runat="server">跳转至</asp:Label>
                    <asp:TextBox ID="txtSkip" runat="server" Height="16px" Width="30px"></asp:TextBox>
-                   <asp:Button ID="btnSkip" runat="server" CommandName="search" Text="Go" />
+                   <asp:Button ID="btnSkip" runat="server" CommandName="search" CssClass="btn btn-danger" Text="Go" />
                </FooterTemplate>
                <ItemTemplate>
                <div style="text-align:center;float:left;height:100px; width:150px;">

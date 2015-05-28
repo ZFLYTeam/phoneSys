@@ -7,7 +7,7 @@
         margin:0 auto;
         padding:0;
         height:100%;
-        width:860px;
+        width:726px;
  
         margin-top:15px;
         margin-bottom:15px;
@@ -16,13 +16,11 @@
          #info
     {
         height:32px;
-        width:860px;
+        width:729px;
         background-color:#eeeee0;
         line-height:32px;
         font-family:黑体;
-        font-size:32px;
-        color:#333;
-        border:1px solid #ff9900;       
+        font-size:32px;      
     }
  </style>
 </asp:Content>
@@ -35,7 +33,7 @@
 <div id="info">所有评价</div>
 <asp:GridView ID="gvEvaluation" runat="server" AutoGenerateColumns="False" 
         AllowPaging="True" onpageindexchanging="gvEvaluation_PageIndexChanging" 
-        PageSize="6" BorderColor="#DEBA84" BackColor="#DEBA84" BorderStyle="None" 
+        PageSize="6" 
         BorderWidth="1px" CellPadding="3" CellSpacing="2"  >
     <Columns>
         <asp:TemplateField HeaderText="评价信息" >
@@ -80,15 +78,10 @@
         </asp:TemplateField>
       
     </Columns>
-    <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-    <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
-    <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
-    <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+    <FooterStyle  />
+    <HeaderStyle BackColor="#eeeee0" Font-Bold="True" ForeColor="black" />
+    <PagerStyle HorizontalAlign="Center" />
     <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
-    <SortedAscendingCellStyle BackColor="#FFF1D4" />
-    <SortedAscendingHeaderStyle BackColor="#B95C30" />
-    <SortedDescendingCellStyle BackColor="#F1E5CE" />
-    <SortedDescendingHeaderStyle BackColor="#93451F" />
     </asp:GridView>
 </div>
 </ContentTemplate>

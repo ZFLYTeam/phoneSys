@@ -8,7 +8,6 @@
         padding:0;
         height:100%;
         width:860px;
-        border:1px solid #ff9900;
         margin-top:15px;
         margin-bottom:15px;
     }
@@ -122,10 +121,10 @@
            <div style="text-align:left;float:left;height:200px; width:70px;"></div>   
          <div style="text-align:left;float:left;height:200px; width:450px;"> 
          <br /><br />
-         <div>评价内容：<br />
+         <div>评价内容<span class="style1">(限500字)</span>：<br />
              <asp:TextBox ID="txtContent" runat="server" TextMode="MultiLine" 
                  Height="121px" Width="434px"></asp:TextBox>  <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-             <span class="style1">限500字</span></div>       
+             </div>       
           </div>            
                
         <br />
@@ -148,17 +147,22 @@
  <asp:DataList ID="DataList1" runat="server" 
             RepeatDirection="Horizontal" onitemcommand="DataList1_ItemCommand" 
                 onitemdatabound="DataList1_ItemDataBound" >
-               <FooterTemplate>
-                   <asp:Label ID="lblCurrentPage" runat="server"></asp:Label>
-                   <asp:Label ID="lblCount" runat="server"></asp:Label>
-                   <asp:LinkButton ID="lbtnFirst" runat="server" CommandName="first">首页</asp:LinkButton>
-                   <asp:LinkButton ID="lbtnPre" runat="server" CommandName="pre">上一页</asp:LinkButton>
-                   <asp:LinkButton ID="lbtnNext" runat="server" CommandName="next">下一页</asp:LinkButton>
-                   <asp:LinkButton ID="lbtnLast" runat="server" CommandName="last">尾页</asp:LinkButton>
-                   <asp:Label ID="lblSkip" runat="server">跳转至</asp:Label>
-                   <asp:TextBox ID="txtSkip" runat="server" Height="16px" Width="30px"></asp:TextBox>
-                   <asp:Button ID="btnSkip" runat="server" CommandName="search" Text="Go" />
-               </FooterTemplate>
+                    <FooterTemplate>
+                        <div style="text-align: center; margin-top: 50px">
+                            <asp:Label ID="lblCurrentPage" runat="server"></asp:Label>
+                            <asp:Label ID="lblCount" runat="server"></asp:Label>
+                            <div class="btn-group">
+                                <asp:LinkButton ID="lbtnFirst" runat="server" CommandName="first" CssClass="btn btn-primary">首页</asp:LinkButton>
+                                <asp:LinkButton ID="lbtnPre" runat="server" CommandName="pre" CssClass="btn btn-primary">上一页</asp:LinkButton>
+                                <asp:LinkButton ID="lbtnNext" runat="server" CommandName="next" CssClass="btn btn-primary">下一页</asp:LinkButton>
+                                <asp:LinkButton ID="lbtnLast" runat="server" CommandName="last" CssClass="btn btn-primary">尾页</asp:LinkButton>
+                            </div>
+                            <asp:Label ID="lblSkip" runat="server">跳转至</asp:Label>
+                            <asp:TextBox ID="txtSkip" runat="server" Height="16px" Width="30px"></asp:TextBox>
+                            <asp:Button ID="btnSkip" runat="server" CommandName="search" CssClass="btn btn-danger"
+                                Text="Go" />
+                        </div>
+                    </FooterTemplate>
                <ItemTemplate>
                <div style="text-align:center;float:left;height:100px; width:150px;">
                 <asp:ImageButton ID="ibtnPhonePhoto" runat="server" 
