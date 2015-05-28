@@ -15,109 +15,58 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <div class="row-fluid">
-                <div class="span9 offset1">
+                <div class="span12">
                     <asp:CheckBox ID="cbAll" runat="server" Text=" 全选" OnCheckedChanged="cbAll_CheckedChanged"
                         AutoPostBack="True" />
                     <asp:ImageButton ID="imgbtnDelete" runat="server" ImageUrl="~/images/delete.jpg"
                         OnClick="imgbtnDelete_Click" />
                 </div>
-                <div class="span9 offset1">
+                <div class="span12">
                     <asp:DataList ID="dlShop" runat="server" RepeatColumns="1" RepeatDirection="Horizontal"
-                        OnItemDataBound="dlShop_ItemDataBound" DataKeyField="shop_id" Height="200px"
-                        Width="900px" OnItemCommand="dlShop_ItemCommand">
+                        OnItemDataBound="dlShop_ItemDataBound" DataKeyField="shop_id" OnItemCommand="dlShop_ItemCommand">
                         <ItemTemplate>
-                            <table class="style1">
-                                <tr>
-                                    <td class="style5" rowspan="2">
-                                        <table class="style4">
-                                            <tr>
-                                                <td dir="ltr" valign="middle">
-                                                    <asp:CheckBox ID="cbSel" runat="server" />
-                                                    <asp:ImageButton ID="imgbtnDelOne" runat="server" CommandArgument='<%# Eval("shop_id") %>'
-                                                        ImageUrl="~/images/deleteicon.gif" OnClick="imgbtnDelOne_Click" ToolTip="删除" />
-                                                    <br />
-                                                    <asp:Image ID="imgLogo" runat="server" AlternateText="淘" BorderColor="#CCCCCC" BorderStyle="Solid"
-                                                        BorderWidth="1px" ForeColor="#FF8000" GenerateEmptyAlternateText="True" Height="90px"
-                                                        ImageAlign="Middle" ImageUrl='~/images/tao.jpg' Width="100px" />
-                                                    <br />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td dir="ltr" valign="middle">
-                                                    <asp:LinkButton ID="lbtnShopName" runat="server" CommandArgument='<%# Eval("shop_id") %>'
-                                                        Font-Underline="True" ForeColor="#CC6600" OnClick="lbtnShopName_Click" Text='<%# Eval("shop_name") %>'></asp:LinkButton>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td dir="ltr" valign="middle">
-                                                    <asp:Label ID="lblHidden" runat="server" Text='<%# Eval("shop_id") %>' Visible="False"></asp:Label>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td dir="ltr" valign="middle">
-                                                    &nbsp;
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td dir="ltr" valign="middle">
-                                                    &nbsp;
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td dir="ltr" valign="middle">
-                                                    &nbsp;
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <asp:Label ID="Label1" runat="server" BorderStyle="None" Font-Bold="False" Font-Names="楷体"
-                                            Font-Size="Large" ForeColor="Red" Height="19px" Text="【本店热销】" Width="117px"></asp:Label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="style3">
-                                        <table class="style6">
-                                            <tr>
-                                                <td>
-                                                    <asp:DataList ID="dlPhoneInShop" runat="server" RepeatColumns="3" RepeatDirection="Horizontal"
-                                                        Width="800px" Height="146px">
-                                                        <ItemTemplate>
-                                                            <table class="style4">
-                                                                <tr>
-                                                                    <td class="style7">
-                                                                        <asp:ImageButton ID="imgbtnPhoto" runat="server" CommandArgument='<%# Eval("phone_id") %>'
-                                                                            Height="150px" ImageUrl='<%# Eval("phone_image") %>' OnClick="imgbtnPhoto_Click"
-                                                                            Width="100px" />
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="style9">
-                                                                        <asp:LinkButton ID="lbtnPName" runat="server" CommandArgument='<%# Eval("phone_id") %>'
-                                                                            ForeColor="#0033CC" OnClick="lbtnPName_Click" Text='<%# Eval("phone_name") %>'
-                                                                            Font-Underline="True"></asp:LinkButton>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="style9">
-                                                                        <asp:Label ID="lblPrice" runat="server" ForeColor="Red" Text='<%# "¥ "+Eval("price") %>'></asp:Label>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </ItemTemplate>
-                                                    </asp:DataList>
-                                                </td>
-                                                <td>
-                                                    &nbsp;
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
+                            <!--左侧-->
+                            <div class="span2 well" style="text-align: center">
+                                <asp:Label ID="lblHidden" runat="server" Text='<%# Eval("shop_id") %>' Visible="False"></asp:Label>
+                                <asp:Image ID="imgLogo" runat="server" AlternateText="淘" BorderColor="#CCCCCC" BorderStyle="Solid"
+                                    BorderWidth="1px" ForeColor="#FF8000" GenerateEmptyAlternateText="True" Height="90px"
+                                    ImageAlign="Middle" ImageUrl='<%# Bind("shop_logo","{0}") %>' Width="100px" />
+                                <br />
+                                <asp:CheckBox ID="cbSel" runat="server" />
+                                <asp:ImageButton ID="imgbtnDelOne" runat="server" CommandArgument='<%# Eval("shop_id") %>'
+                                    ImageUrl="~/images/deleteicon.gif" OnClick="imgbtnDelOne_Click" ToolTip="删除" />
+                                <asp:LinkButton ID="lbtnShopName" runat="server" CommandArgument='<%# Eval("shop_id") %>'
+                                    OnClick="lbtnShopName_Click" Text='<%# Eval("shop_name") %>'></asp:LinkButton>
+                            </div>
+                            <!--搜索结果做右侧-->
+                            <div class="span9" style="padding-left: 20px">
+                                <div class="row">
+                                    <asp:Label ID="Label1" runat="server" Text="【本店热销】" class="label label-important"></asp:Label>
+                                    <asp:DataList ID="dlPhoneInShop" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
+                                        <ItemTemplate>
+                                            <div style="text-align: center;width:280px">
+                                                <div class="thumbnail" style="margin-top: 5px">
+                                                    <asp:ImageButton ID="imgbtnPhoto" runat="server" CommandArgument='<%# Eval("phone_id") %>'
+                                                        Height="150px" ImageUrl='<%# Eval("phone_image") %>' OnClick="imgbtnPhoto_Click"
+                                                        Width="100px" />
+                                                    <div class="caption">
+                                                        <div style="height: 40px">
+                                                            <h5>
+                                                                <asp:LinkButton ID="lbtnPName" runat="server" CommandArgument='<%# Eval("phone_id") %>'
+                                                                    OnClick="lbtnPName_Click" Text='<%# Eval("phone_name") %>'></asp:LinkButton>
+                                                                <asp:Label ID="lblPrice" runat="server" ForeColor="Red" Text='<%# "¥ "+Eval("price") %>'></asp:Label>
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                </div>
+                            </div>
                         </ItemTemplate>
                         <FooterTemplate>
-                            <div style="text-align:center;">
+                            <div style="text-align: center;">
                                 <asp:Label ID="lblCurrentPage" runat="server"></asp:Label>
                                 <asp:Label ID="lblCount" runat="server"></asp:Label>
                                 <div class="btn-group">

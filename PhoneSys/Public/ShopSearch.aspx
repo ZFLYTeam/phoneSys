@@ -170,20 +170,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <table class="style4">
-                                                    <tr>
-                                                        <td class="style7">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="style9">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="width: 160px; text-align: center;">
-                                                        </td>
-                                                    </tr>
-                                                </table>
                                             </div>
                                         </ItemTemplate>
                                     </asp:DataList>

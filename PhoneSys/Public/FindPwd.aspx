@@ -11,7 +11,7 @@
                 找回密码
             </h1>
         </div>
-        <div class="form-horizontal">
+        <div class="form-horizontal span2 offset3" >
             <div class="control-group">
                 <label class="control-label" for="txtUserName">
                     用户名</label>
@@ -52,7 +52,7 @@
                     <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtNewPwd"
                         ControlToValidate="txtConfirmPwd" ErrorMessage="两次输入密码不一致!" ForeColor="Red"></asp:CompareValidator></div>
                 <div class="controls">
-                <asp:Button Text="保存"  ID="ibtnSave" runat="server" onclick="ibtnSave_Click"/>
+                <asp:Button Text="保存"  ID="ibtnSave" runat="server" onclick="ibtnSave_Click" class="btn btn-success" Width="220px"/>
                 </div>
             </div>
         </div>
