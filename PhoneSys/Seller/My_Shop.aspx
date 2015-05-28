@@ -1,30 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Public/style.master" AutoEventWireup="true" CodeFile="My_Shop.aspx.cs" Inherits="Seller_My_Shop" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link href="../css/seller_display.css" rel="stylesheet" type="text/css" />  
-    <style type="text/css">
-        .style1
-        {
-            width: 100%;
-            height: 224px;
-        }
-        .style2
-        {
-            text-align: center;
-        }
-        #content
-    {
-        margin:0 auto;
-        padding:0;
-        height:auto;
-        width:1035px;
-        border:1px solid #ff9900;
-        margin-top:15px;
-        margin-bottom:15px;
-        font-family: 微软雅黑;  
-        background-image:url('../images/seller2.jpg'); 
-    }
-
-    </style>
 </asp:Content>
    
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -40,10 +15,8 @@
                     <br />
                    
                     &nbsp;
-                   
-                    <asp:Button ID="btnPublish" class="btn btn-green btn-publish" runat="server" BackColor="#006600" 
-                            BorderColor="#006600" BorderStyle="Solid" BorderWidth="2px" ForeColor="White" 
-                            Height="38px" Width="123px" onclick="btnPublish_Click" Text="添加宝贝" />
+                    <asp:Button ID="btnPublish" runat="server" OnClick="btnPublish_Click"
+                            Text=" 添加宝贝" Width="100px"  class="btn btn-green btn-publish"/>
                     <br />
                     <br />
         <asp:DataList ID="DataList1" runat="server" 
@@ -179,7 +152,7 @@
                 </table>
             </EditItemTemplate>
             <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-            <FooterTemplate>
+<%--            <FooterTemplate>
                 <div style="text-align: center">
                     <asp:Label ID="lblCurrentPage" runat="server"></asp:Label>
                     /<asp:Label ID="lblPageCount" runat="server"></asp:Label>
@@ -195,8 +168,24 @@
                     第<asp:TextBox ID="txtPage" runat="server" Height="24px" Width="39px"></asp:TextBox>
                     页 
                     <asp:Button ID="btnGo" runat="server" CommandName="search" Text="GO" />
-                </div>
-            </FooterTemplate>
+                </div>                                                                                              
+            </FooterTemplate>--%>
+                    <FooterTemplate>
+                            <div style="text-align: center; padding-top: 20px">
+                                <asp:Label ID="lblCurrentPage" runat="server"></asp:Label>
+                                <asp:Label ID="lblPageCount" runat="server"></asp:Label>
+                                <div class="btn-group">
+                                    <asp:LinkButton ID="lbtnFirst" runat="server" CommandArgument="first" CssClass="btn btn-info">首页</asp:LinkButton>
+                                    <asp:LinkButton ID="lbtnPre" runat="server" CommandName="pre" CssClass="btn btn-info">上一页</asp:LinkButton>
+                                    <asp:LinkButton ID="lbtnNext" runat="server" CommandName="next" CssClass="btn btn-info">下一页</asp:LinkButton>
+                                    <asp:LinkButton ID="lbtnLast" runat="server" CommandName="last" CssClass="btn btn-info">尾页</asp:LinkButton>
+                                </div>
+                                <asp:Label ID="lbl1" runat="server" Text="跳转至"></asp:Label>
+                                <asp:TextBox ID="txtPage" runat="server" Width="28px"></asp:TextBox>
+                                <asp:Button ID="btnGo" runat="server" CommandName="search" Text="Go" class="btn btn-primary btn-mini" />
+                            </div>
+                        </FooterTemplate>
+
             <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
             <HeaderTemplate>
                 <br />
