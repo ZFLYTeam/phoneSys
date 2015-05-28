@@ -79,7 +79,7 @@ public partial class Seller_UpdatePhoneInfo : System.Web.UI.Page
             //获取上传头像的名称
             img = fudImg.FileName;
             //更该头像名称
-            img = img.Replace(img.Substring(0, img.LastIndexOf(".")), txtphonename.Text);
+            img = img.Replace(txtphonename.Text,img.Substring(0, img.LastIndexOf(".")));
             //设置保存路径
             img = "images_phone/" + img;
             //保存上传的头像

@@ -149,7 +149,7 @@
                 <asp:FileUpload ID="fudImg" runat="server" Width="181px" Height="29px" />
                 <br />
                 <br />
-                <asp:Button ID="btnpreview" runat="server" Text="预览" Height="30px" Width="60px" OnClick="btnpreview_Click" />
+                <asp:Button ID="btnpreview" runat="server" Text="预览"  Width="60px" OnClick="btnpreview_Click" CssClass="btn btn-info"/>
             </div>
         </div>
     </div>
