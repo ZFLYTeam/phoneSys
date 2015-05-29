@@ -14,14 +14,14 @@
     <td>内核编号：</td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtCPUid" runat="server" BorderStyle="Solid" BorderWidth="1px" 
-            Height="30px" Width="166px"></asp:TextBox>
+            Height="30px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>
     <td>核心数名称：</td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtCPUname" runat="server" BorderStyle="Solid" 
-            BorderWidth="1px" Height="29px" Width="168px"></asp:TextBox>
+            BorderWidth="1px" Height="29px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>

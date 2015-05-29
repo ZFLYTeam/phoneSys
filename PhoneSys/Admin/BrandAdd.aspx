@@ -15,14 +15,14 @@
     <td>品牌编号：</td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtbrandid" runat="server" BorderStyle="Solid" 
-            BorderWidth="1px" Height="30px" Width="197px"></asp:TextBox>
+            BorderWidth="1px" Height="30px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>
     <td>名称：</td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtbrandname" runat="server" BorderStyle="Solid" 
-            BorderWidth="1px" Height="33px" Width="282px"></asp:TextBox>
+            BorderWidth="1px" Height="33px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>

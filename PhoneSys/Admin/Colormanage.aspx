@@ -8,9 +8,9 @@
     手机颜色设置
     </div>
         <div style=" text-align:right;"> 
-        <asp:Button ID="txtaddcolor" runat="server" Text="颜色颜色添加" 
-            onclick="txtaddcolor_Click" Height="26px" BackColor="#CC0000" 
-                ForeColor="White" />
+        <asp:Button ID="txtaddcolor" runat="server" Text="添加" 
+            onclick="txtaddcolor_Click" Height="30px" BackColor="#00CC66" 
+                ForeColor="White" Width="85" />
     </div>
     <div>
     <center>

@@ -32,8 +32,8 @@
         </UpdateParameters>
     </asp:SqlDataSource>
     <div style="text-align:right;">
-        <asp:Button ID="txtaddbrand" runat="server" Text="添加品牌" 
-            onclick="txtaddbrand_Click" BackColor="#CC0000" ForeColor="White" />
+        <asp:Button ID="txtaddbrand" runat="server" Text="添加" 
+            onclick="txtaddbrand_Click" BackColor="#00CC66" ForeColor="White" Width="80px" Height="26px"/>
     </div>
     <div>
 

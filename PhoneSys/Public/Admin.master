@@ -242,7 +242,7 @@
     <script type="text/javascript">
         $(function () {
             $('.selectpicker').selectpicker();
-            $('.bootstrap-select').width('75px');
+            $('.bootstrap-select').width('100px');
         });
 
         function logIn() {

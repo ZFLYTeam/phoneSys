@@ -14,14 +14,14 @@
     <td>颜色编号：</td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtcolorid" runat="server" BorderStyle="Solid" 
-            BorderWidth="1px" Height="31px" Width="191px"></asp:TextBox>
+            BorderWidth="1px" Height="31px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>
     <td>名称：</td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtcolorname" runat="server" BorderStyle="Solid" 
-            BorderWidth="1px" Height="33px" Width="204px"></asp:TextBox>
+            BorderWidth="1px" Height="33px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@
     </table>
     <div style="width:80%;text-align:center;margin-top:15px;">
         <asp:Button ID="btnSave" runat="server" Text="保存" onclick="btnSave_Click" 
-            BackColor="Red" ForeColor="White" Width="55px" />
+           class="btn-primary"  Width="85px" />
     </div>
     </center>
     </div>

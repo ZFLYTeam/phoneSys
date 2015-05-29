@@ -7,8 +7,8 @@
     手机核心数管理
     </div>
     <div style=" text-align:right;">
-        <asp:Button ID="txtaddcpu" runat="server" Text="核心数类型" 
-            onclick="txtaddcpu_Click" BackColor="#CC0000" ForeColor="White" />
+        <asp:Button ID="txtaddcpu" runat="server" Text="添加" 
+            onclick="txtaddcpu_Click" BackColor="#00CC66" ForeColor="White" Width="85px" />
     </div>
     <div>
     <center>
