@@ -199,7 +199,7 @@ public partial class Buyer_LookShop : System.Web.UI.Page
         {
             Session["Uid"] = userdDT.Rows[0][1].ToString();
             BuyerDSTableAdapters.CollectionTableAdapter collectDA = new BuyerDSTableAdapters.CollectionTableAdapter();
-            DataTable collectDT = collectDA.GetDataByUid(System.Guid.Parse(Session["Uid"].ToString()),"shop");
+            DataTable collectDT = collectDA.GetDateByUIDandShopId(System.Guid.Parse(Session["Uid"].ToString()), long.Parse(Session["ShopId"].ToString()));
             if (collectDT.Rows.Count != 0)
             {
                 Response.Write("<Script>alert('您已收藏过该店铺！')</Script>");

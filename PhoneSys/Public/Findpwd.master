@@ -120,10 +120,8 @@
             <!--导航结束-->
         </div>
         <!--rowEnd-->
-          <div style="padding-top: 25px; height: auto; min-height: 400px; _height: 500px;">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
             </asp:ContentPlaceHolder>
-        </div>
     </div>
 
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">

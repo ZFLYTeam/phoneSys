@@ -53,7 +53,7 @@ public partial class Buyer_GoComplain : System.Web.UI.Page
     private void BindDatalist(int currentpage)
     {
         pds.AllowPaging = true;
-        pds.PageSize = 3;
+        pds.PageSize = 6;
         pds.CurrentPageIndex = currentpage;
 
         SqlConnection Conn = new SqlConnection(ConnSql);
