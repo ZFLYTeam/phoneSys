@@ -10,21 +10,21 @@
     <center>
     <table style="width:80%; height: 95px;;height:50px;font-size:40px;">
     <tr>
-    <td>尺寸编号：</td>
+    <td><span style="font-size: 20px">尺寸编号：</span></td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtsizeid" runat="server" BorderStyle="Solid" 
-            BorderWidth="1px" Height="29px" Width="183px"></asp:TextBox>
+            BorderWidth="1px" Height="29px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>
-    <td>尺寸大小：</td>
+    <td><span style="font-size: 20px">尺寸大小：</span></td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtsizename" runat="server" BorderStyle="Solid" 
-            BorderWidth="1px" Height="29px" Width="186px"></asp:TextBox>
+            BorderWidth="1px" Height="29px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>
-    <td>备注：</td>
+    <td><span style="font-size: 20px">备注：</span></td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtcommit" runat="server" Height="86px" TextMode="MultiLine" 
             Width="338px" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>

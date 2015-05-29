@@ -12,14 +12,14 @@
     <td>系统编号：</td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtosid" runat="server" BorderStyle="Solid" BorderWidth="1px" 
-            Height="32px" Width="178px"></asp:TextBox>
+            Height="32px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>
     <td>系统名称：</td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtosname" runat="server" BorderStyle="Solid" 
-            BorderWidth="1px" Height="32px" Width="204px"></asp:TextBox>
+            BorderWidth="1px" Height="32px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>

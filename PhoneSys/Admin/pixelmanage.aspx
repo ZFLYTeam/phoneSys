@@ -8,8 +8,8 @@
     手机分辨率管理
     </div>
         <div style=" text-align:right;">
-        <asp:Button ID="txtaddpixel" runat="server" Text="分辨率类型" 
-            onclick="txtaddpixel_Click" BackColor="#CC0000" ForeColor="White" />
+        <asp:Button ID="txtaddpixel" runat="server" Text="添加" 
+            onclick="txtaddpixel_Click" BackColor="#00CC66" ForeColor="White" Width="85px"/>
     </div>
     <div>
     <center>

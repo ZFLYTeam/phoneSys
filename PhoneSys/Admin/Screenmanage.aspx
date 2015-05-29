@@ -7,8 +7,8 @@
         屏幕尺寸管理
     </div>
         <div style=" text-align:right;">
-        <asp:Button ID="txtaddscreen" runat="server" Text="添加尺寸类型" 
-            onclick="txtaddscreen_Click" BackColor="#CC0000" ForeColor="White" />
+        <asp:Button ID="txtaddscreen" runat="server" Text="添加" 
+            onclick="txtaddscreen_Click" BackColor="#00CC66" ForeColor="White" Width="85px" />
     </div>
     <div>
     <center>

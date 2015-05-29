@@ -7,8 +7,8 @@
         操作系统管理
     </div>
         <div style=" text-align:right;">
-        <asp:Button ID="txtaddos" runat="server" Text="添加系统类型" 
-            onclick="txtaddos_Click" BackColor="#CC0000" ForeColor="White" />
+        <asp:Button ID="txtaddos" runat="server" Text="添加" 
+            onclick="txtaddos_Click" BackColor="#00CC66" ForeColor="White" Width="85px"/>
     </div>
     <div>
     <center>

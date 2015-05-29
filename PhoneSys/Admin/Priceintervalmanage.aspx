@@ -8,7 +8,7 @@
     </div>
         <div style=" text-align:right;">
         <asp:Button ID="txtaddprival" runat="server" Text="添加区间" 
-            onclick="txtaddprival_Click" BackColor="#CC0000" ForeColor="White" />
+            onclick="txtaddprival_Click" BackColor="#00CC66" ForeColor="White" Width="85px" />
     </div>
     <div>
     <center>

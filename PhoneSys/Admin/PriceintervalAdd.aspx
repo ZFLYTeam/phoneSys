@@ -13,21 +13,21 @@
     <td>区间编号：</td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtpriceid" runat="server" BorderStyle="Solid" 
-            BorderWidth="1px" Height="27px" Width="168px"></asp:TextBox>
+            BorderWidth="1px" Height="27px" Width="338px" ></asp:TextBox>
         </td>
     </tr>
     <tr>
     <td>价格下限：</td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtpricelow" runat="server" BorderStyle="Solid" 
-            BorderWidth="1px" Height="27px" Width="178px"></asp:TextBox>
+            BorderWidth="1px" Height="27px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>
     <td>价格上限：</td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtpricehigh" runat="server" BorderStyle="Solid" 
-            BorderWidth="1px" Height="27px" Width="191px"></asp:TextBox>
+            BorderWidth="1px" Height="27px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>

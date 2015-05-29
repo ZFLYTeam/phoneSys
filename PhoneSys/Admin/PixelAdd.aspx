@@ -13,14 +13,14 @@
     <td>类型编号：</td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtpixelid" runat="server" BorderStyle="Solid" 
-            BorderWidth="1px" Height="30px" Width="178px"></asp:TextBox>
+            BorderWidth="1px" Height="30px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>
     <td>名称：</td>
     <td style="text-align:left;">
         <asp:TextBox ID="txtpixelname" runat="server" BorderStyle="Solid" 
-            BorderWidth="1px" Height="33px" Width="190px"></asp:TextBox>
+            BorderWidth="1px" Height="33px" Width="338px"></asp:TextBox>
         </td>
     </tr>
     <tr>
