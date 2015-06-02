@@ -75,7 +75,7 @@
             BorderColor="Red" OnCheckedChanged="cbxselfzuser_CheckedChanged" Text="全选" />
         &nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnfzuser" runat="server" Text="冻结用户"
-            OnClick="btnfzuser_Click" />
+            OnClick="btnfzuser_Click" BackColor="Blue" ForeColor="White"/>
     </div>
 
 
