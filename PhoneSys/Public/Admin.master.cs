@@ -30,17 +30,17 @@ public partial class Public_style : System.Web.UI.MasterPage
             }
             else
             {
-                Response.Redirect("~Public/Index.aspx");
+                Response.Redirect("../Public/Index.aspx");
             }
         }
     }
     protected void btnQuit_Click1(object sender, EventArgs e)
     {
         Session.Clear();
-        Response.Redirect("~/Public/index.aspx");
+        Response.Redirect("../Public/index.aspx");
     }
     protected void lbtnFirstPage_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Public/Index.aspx");
+        Response.Redirect("..//Public/Index.aspx");
     }
 }
