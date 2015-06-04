@@ -90,7 +90,7 @@
                 </tr>
                 <tr>
                     <td style="line-height: 20px;">
-                        <asp:ImageButton ID="ibtnMoveCart" runat="server" ImageUrl="~/images/加入购物车.jpg"  OnClick="ibtnCollect_Click"/>
+                        <asp:ImageButton ID="ibtnMoveCart" runat="server" ImageUrl="~/images/加入购物车.jpg"  OnClick="ibtnMoveCart_Click"/>
                         <asp:ImageButton ID="ibtnBuyNow" runat="server" ImageUrl="~/images/立即购买.jpg" OnClick="ibtnBuyNow_Click" />
                     </td>
                 </tr>
