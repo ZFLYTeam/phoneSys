@@ -144,13 +144,6 @@
                         <div id="accordion-element-sjsxgl" class="accordion-body collapse">
                             <div class="accordion-inner">
                                 <ul class="nav nav-pills nav-stacked">
-                                    <li><a href="../Admin/BrandAdd.aspx">添加手机品牌</a></li>
-                                    <li><a href="../Admin/ColorAdd.aspx">添加手机颜色</a></li>
-                                    <li><a href="../Admin/CpuAdd.aspx">添加内核类型</a></li>
-                                    <li><a href="../Admin/OSadd.aspx">添加系统类型</a></li>
-                                    <li><a href="../Admin/PixelAdd.aspx">添加像素类型</a></li>
-                                    <li><a href="../Admin/ScreenAdd.aspx">添加屏幕尺寸</a></li>
-                                    <li><a href="../Admin/PriceintervalAdd.aspx">添加价格区间</a></li>
                                     <li><a href="../Admin/Brandmanage.aspx">手机品牌管理</a></li>
                                     <li><a href="../Admin/Colormanage.aspx">手机颜色管理</a></li>
                                     <li><a href="../Admin/Cpumanage.aspx">内核类型管理</a></li>
