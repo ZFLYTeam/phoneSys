@@ -34,8 +34,8 @@
     </tr>
     </table>
     <div style="width:76%; text-align:center;margin-top:15px;">
-        <asp:ImageButton ID="IbnSave" runat="server" Height="30px" 
-            ImageUrl="../images/save.jpg" onclick="IbnSave_Click" Width="60px" />
+        <asp:ImageButton ID="IbnSave" runat="server" 
+            ImageUrl="../images/保存.gif" onclick="IbnSave_Click" Width="60px" />
     </div>
     </center>
     </div>

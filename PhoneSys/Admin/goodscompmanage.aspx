@@ -36,7 +36,7 @@
 
             <asp:GridView ID="gdvcompmana" runat="server" AutoGenerateColumns="False"
                 DataSourceID="sdsgoodsmana" DataKeyNames="complaint_id" BackColor="#DEBA84"
-                BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3"
+                BorderColor="#d4d4d4" BorderStyle="None" BorderWidth="1px" CellPadding="3"
                 CellSpacing="2" Width="712px" OnRowDataBound="gdvcompmana_RowDataBound"
                 OnRowUpdating="gdvcompmana_RowUpdating" EmptyDataText="查询结果为空">
                 <Columns>
@@ -81,10 +81,10 @@
                     </asp:TemplateField>
                 </Columns>
                 <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-                <HeaderStyle BackColor="#A55129" Font-Bold="True" Font-Size="Large"
+                <HeaderStyle BackColor="#ffffff" Font-Bold="True" Font-Size="Large"
                     ForeColor="White" />
                 <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
-                <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                <RowStyle BackColor="#ffffff" ForeColor="#8C4510" />
                 <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
                 <SortedAscendingCellStyle BackColor="#FFF1D4" />
                 <SortedAscendingHeaderStyle BackColor="#B95C30" />

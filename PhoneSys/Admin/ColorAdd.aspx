@@ -34,7 +34,7 @@
     </table>
     <div style="width:80%;text-align:center;margin-top:15px;">
         <asp:Button ID="btnSave" runat="server" Text="保存" onclick="btnSave_Click" 
-           class="btn-primary"  Width="85px" />
+           cssclass="btn btn-danger"  />
     </div>
     </center>
     </div>

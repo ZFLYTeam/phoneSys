@@ -35,7 +35,7 @@
             <div style="text-align: center; min-height: 300px; margin-left: 20px; margin-top: 20px; float: left; clear: right;">
                 <asp:GridView ID="gdvcompmana" runat="server" AutoGenerateColumns="False"
                     DataSourceID="sdsgoodsmana" DataKeyNames="complaint_id" BackColor="White"
-                    BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4"
+                    BorderColor="#d4d4d4" BorderStyle="None" BorderWidth="1px" CellPadding="4"
                     Width="712px" OnRowDataBound="gdvcompmana_RowDataBound"
                     AllowPaging="True" PageSize="3">
                     <Columns>
@@ -73,16 +73,16 @@
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
-                    <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
-                    <HeaderStyle BackColor="#990000" Font-Bold="True" Font-Size="Large"
-                        ForeColor="#FFFFCC" Height="0px" />
-                    <PagerStyle ForeColor="#330099" HorizontalAlign="Center" BackColor="#FFFFCC" />
-                    <RowStyle BackColor="White" ForeColor="#330099" />
-                    <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
-                    <SortedAscendingCellStyle BackColor="#FEFCEB" />
-                    <SortedAscendingHeaderStyle BackColor="#AF0101" />
-                    <SortedDescendingCellStyle BackColor="#F6F0C0" />
-                    <SortedDescendingHeaderStyle BackColor="#7E0000" />
+                <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+                <HeaderStyle BackColor="#ffffff" Font-Bold="True" Font-Size="Large"
+                    ForeColor="White" />
+                <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+                <RowStyle BackColor="#ffffff" ForeColor="#8C4510" />
+                <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#FFF1D4" />
+                <SortedAscendingHeaderStyle BackColor="#B95C30" />
+                <SortedDescendingCellStyle BackColor="#F1E5CE" />
+                <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="sdsgoodsmana" runat="server"
                     ConnectionString="<%$ ConnectionStrings:ApplicationServices %>"

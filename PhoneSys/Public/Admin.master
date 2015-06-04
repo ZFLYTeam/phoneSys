@@ -8,6 +8,12 @@
     <link href="../libs/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
     <link href="../libs/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
     <link href="../libs/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <style type="text/css">
+        label
+        {
+            display: inline;
+        }
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

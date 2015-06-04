@@ -40,7 +40,7 @@
     </table>
     <div style="width:80%;text-align:center">
         <asp:ImageButton ID="Ibnsave" runat="server" Height="35px" 
-            ImageUrl="~/images/save.jpg" onclick="Ibnsave_Click" />
+            ImageUrl="~/images/保存.gif" onclick="Ibnsave_Click" />
     </div>
     </center>
     </div>
